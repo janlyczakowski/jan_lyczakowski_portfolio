@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/jan_lyczakowski_portfolio/static/css/main.d7b558b1.css",
-    "main.js": "/jan_lyczakowski_portfolio/static/js/main.240c9d6b.js",
+    "main.css": "/jan_lyczakowski_portfolio/static/css/main.8523676f.css",
+    "main.js": "/jan_lyczakowski_portfolio/static/js/main.f6e892d5.js",
     "static/media/corsica_map.pdf": "/jan_lyczakowski_portfolio/static/media/corsica_map.e131873cad20d19f633b.pdf",
     "static/media/Me_low_resolution.jpg": "/jan_lyczakowski_portfolio/static/media/Me_low_resolution.2d1ffc0d7c56d47c4adb.jpg",
     "static/media/world_map.gif": "/jan_lyczakowski_portfolio/static/media/world_map.690568dc457aa8690eb3.gif",
@@ -14,6 +14,7 @@
     "static/media/hogwarts500x500.jpg": "/jan_lyczakowski_portfolio/static/media/hogwarts500x500.59f4c76402009c198b1c.jpg",
     "static/media/seb500x500.png": "/jan_lyczakowski_portfolio/static/media/seb500x500.68761322a81a38619125.png",
     "static/media/notebook500x500.png": "/jan_lyczakowski_portfolio/static/media/notebook500x500.3fc7b31f5ecd0b0ec0cc.png",
+    "static/media/mayor_enigma_icon.png": "/jan_lyczakowski_portfolio/static/media/mayor_enigma_icon.ebedd32809a1bfa14f66.png",
     "static/media/map2.svg": "/jan_lyczakowski_portfolio/static/media/map2.c676e0fbd703a908257c16daa4c5542f.svg",
     "static/media/web_icon.svg": "/jan_lyczakowski_portfolio/static/media/web_icon.c0a9a6e67f5245b8f48c5df7adb101e2.svg",
     "static/media/location2.svg": "/jan_lyczakowski_portfolio/static/media/location2.a7d6b64067995f97fd12bb85d34af67e.svg",
@@ -22,11 +23,11 @@
     "index.html": "/jan_lyczakowski_portfolio/index.html",
     "static/media/university.svg": "/jan_lyczakowski_portfolio/static/media/university.85308867b78775e57190b440ac34c72f.svg",
     "static/media/work.svg": "/jan_lyczakowski_portfolio/static/media/work.07278c7e8f5a83c52b11ce71b3e77ddb.svg",
-    "main.d7b558b1.css.map": "/jan_lyczakowski_portfolio/static/css/main.d7b558b1.css.map",
-    "main.240c9d6b.js.map": "/jan_lyczakowski_portfolio/static/js/main.240c9d6b.js.map"
+    "main.8523676f.css.map": "/jan_lyczakowski_portfolio/static/css/main.8523676f.css.map",
+    "main.f6e892d5.js.map": "/jan_lyczakowski_portfolio/static/js/main.f6e892d5.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7b558b1.css",
-    "static/js/main.240c9d6b.js"
+    "static/css/main.8523676f.css",
+    "static/js/main.f6e892d5.js"
   ]
 }
