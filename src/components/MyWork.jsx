@@ -25,7 +25,7 @@ function MyWork() {
   };
 
   return (
-    <section id="work">
+    <section id={styles['work']}>
       <h2 className={'section__title'}>My work</h2>
       <ul className={`${styles.categories} ${styles.generic_categories}`}>
         {['all', 'geo-spatial', 'other'].map((category) => (
