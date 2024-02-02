@@ -85,6 +85,9 @@
 .nav_item {
   margin: 0 1em;
 }
+.nav_item:first-of-type {
+  margin-top: 1.5em;
+}
 .nav_link {
   color: inherit;
   text-decoration: none;
@@ -132,6 +135,9 @@
   }
   .nav_item:first-child {
     margin-left: 0;
+  }
+  .nav_item:first-of-type {
+    margin: inherit;
   }
 }
 .resize-animation-stopper * {

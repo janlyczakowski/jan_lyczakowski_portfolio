@@ -38,7 +38,7 @@ function AboutMe() {
             <span className={styles.city} onClick={onClickHandler}>
               Bari
             </span>{' '}
-            in 2020.
+            (Italy) in 2020.
           </p>
           <p className={styles.section_intro_text}>
             After graduation I did 7 months-internship, learning development of
