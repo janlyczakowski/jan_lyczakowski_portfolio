@@ -55,8 +55,7 @@ function MyWork() {
           'java',
           'luciadlightspeed',
           'arcgis pro',
-          'adobe photoshop',
-          'adobe illustrator',
+          'adobe',
         ].map((category) => (
           <li
             key={category}

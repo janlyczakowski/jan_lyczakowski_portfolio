@@ -32,7 +32,7 @@ export const PORTFOLIO_ITEMS = [
   },
   {
     navigateTo: 'mywork/corsica',
-    dataSpec: ['all', 'arcgis pro', 'adobe illustrator'],
+    dataSpec: ['all', 'arcgis pro', 'adobe'],
     dataGen: ['all', 'geo-spatial'],
     dataAttribute: 'corsica',
     srcImg: corsicaImg,
@@ -48,7 +48,7 @@ export const PORTFOLIO_ITEMS = [
       'css',
       'javascript',
       'react',
-      'adobe photoshop',
+      'adobe',
       'three js',
     ],
     dataGen: ['all', 'other'],
