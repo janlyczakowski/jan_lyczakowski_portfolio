@@ -1,0 +1,264 @@
+#about {
+  padding: 6em 2em 6em 2em;
+}
+.city,
+.link {
+  color: rgb(155, 155, 155);
+}
+.section_intro_content {
+  margin: 2.5em 0;
+  max-width: 700px;
+  margin: auto;
+}
+.section_intro_text:first-of-type {
+  margin-top: 0;
+}
+.section_intro_text:last-of-type {
+  margin-bottom: 5em;
+}
+.intro_picture {
+  object-fit: cover;
+  box-shadow: var(--bs);
+  max-width: 60%;
+  margin: auto;
+}
+.map_container {
+  padding-top: 0 !important;
+}
+#my_map {
+  position: relative;
+  background-image: url('../resources/img/Mymap1.png');
+  background-color: black;
+  background-size: 100% 100%;
+  max-width: 800px;
+  margin: auto;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  height: 75vw;
+  max-height: 750px;
+}
+
+#my_map .marker {
+  z-index: 1;
+  position: absolute;
+  background-size: 100% 100%;
+  width: 12px;
+  height: 12px;
+  transform: translate(-1px, -1px);
+}
+#my_map .home_marker {
+  background-image: url('../resources/img/home.svg');
+}
+#my_map .work_marker {
+  background-image: url('../resources/img/work.svg');
+}
+#my_map .university_marker {
+  background-image: url('../resources/img/university.svg');
+}
+#braniewo {
+  top: 2.5%;
+  left: 61.5%;
+}
+#genoa {
+  top: 56.5%;
+  left: 29.5%;
+}
+#warsaw {
+  top: 13%;
+  left: 67%;
+}
+#bari {
+  top: 74%;
+  left: 60.5%;
+}
+#munich {
+  top: 37%;
+  left: 39%;
+}
+#vienna {
+  top: 36%;
+  left: 55%;
+}
+#dresden {
+  top: 21.5%;
+  left: 44.5%;
+}
+.marker span {
+  display: none;
+}
+.map_legend {
+  position: absolute;
+  bottom: -60px;
+  right: 50%;
+  font-size: 0.6em;
+  height: auto;
+  background-color: rgb(24, 24, 24);
+  box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  padding-right: 1em;
+  transform: translateX(50%);
+}
+.map_legend_list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+.map_legend_item {
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+}
+.legend_marker {
+  width: 12px;
+  height: 12px;
+  background-size: 100% 100%;
+}
+.legend_text {
+  color: white;
+  margin-left: 1em;
+}
+.link:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1100px) {
+  #my_map .marker {
+    width: 24px;
+    height: 24px;
+    transform: translate(0, 0);
+  }
+  .map_legend {
+    font-size: 1em;
+    width: 150px;
+    height: auto;
+    padding-right: 0;
+  }
+  .legend_marker {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .intro {
+    display: grid;
+    grid-template-columns: 3fr 0.5fr 400px 0.5fr;
+    grid-template-areas:
+      'title title title .'
+      'text . img .'
+      'text . img .';
+  }
+  .section_intro_content {
+    grid-area: text;
+    margin: 0;
+  }
+  .section_intro_text:last-of-type {
+    margin-bottom: 1em;
+  }
+  .section__title_intro {
+    grid-area: title;
+  }
+  .intro_picture {
+    grid-area: img;
+    min-height: 100%;
+    min-width: 100%;
+  }
+  .marker span {
+    color: black;
+    font-weight: bold;
+    display: none;
+    position: absolute;
+    width: auto;
+    top: -22px;
+    left: 22px;
+    padding: 7px;
+    background-color: rgb(195, 195, 195);
+    border-radius: 5px;
+    font-size: 11px;
+    white-space: nowrap;
+    box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.2);
+  }
+  .marker#munich span {
+    top: 25px;
+    left: 20px;
+  }
+  .marker#braniewo span {
+    top: -16px;
+    left: 22px;
+  }
+  .marker:hover span {
+    display: block;
+  }
+  .marker:hover {
+    cursor: pointer;
+    width: 28px !important;
+    height: 28px !important;
+    transform: translate(-3px, -3px) !important;
+  }
+  .city:hover {
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  #my_map {
+    height: 85vw;
+  }
+  #my_map .marker {
+    transform: translate(2px, 3px);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #my_map {
+    height: 83vw;
+  }
+  .map_legend {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 0.75em;
+    height: auto;
+    background-color: rgb(24, 24, 24);
+    box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding-right: 1em;
+    transform: translateX(0);
+  }
+  .map_legend_list {
+    flex-direction: column;
+  }
+  #my_map .marker {
+    transform: translate(-1px, -1px);
+  }
+}
+
+@media screen and (min-width: 500px) {
+  #my_map {
+    height: 80vw;
+  }
+  #my_map .marker {
+    width: 20px;
+    height: 20px;
+    transform: translate(-5px, -5px);
+  }
+  .legend_marker {
+    width: 20px;
+    height: 20px;
+  }
+  .map_legend {
+    font-size: 0.75em;
+  }
+  .intro_picture {
+    max-width: 50%;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  #my_map .marker {
+    transform: translate(1px, -2px);
+  }
+}

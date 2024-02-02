@@ -1,0 +1,100 @@
+.portfolio_img {
+  transition: transform 750ms ease-in-out, opacity 250ms linear;
+}
+.invisible {
+  display: none;
+}
+.visible {
+  display: block;
+}
+.portfolio_item_cover_text {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  transform: translate(-50%, -50%);
+  font-weight: var(--fw-bold);
+  /* font-style: italic; */
+  visibility: hidden;
+  transition: visibility 250ms linear;
+}
+.portfolio_item_cover_text_show {
+  visibility: visible;
+}
+.portfolio_item {
+  background: var(--clr-grey);
+  overflow: hidden;
+  transition: visibility 1s linear;
+  position: relative;
+}
+.portfolio_img:hover,
+.portfolio_item:focus .portfolio_img {
+  transform: scale(1.15);
+  opacity: 0.3;
+}
+.portfolio {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  grid-gap: 2em;
+}
+
+.categories {
+  display: flex;
+  margin-bottom: 3em;
+  justify-content: center;
+  padding: 0;
+  flex-wrap: wrap;
+  font-size: 1rem;
+}
+.generic_categories {
+  margin-top: 4em;
+}
+.category {
+  color: var(--clr-light);
+  font-weight: var(--fw-bold);
+  list-style: none;
+  margin: 0 1em 1em;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.category::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 0;
+  color: var(--clr-light);
+  background: var(--clr-light);
+  visibility: hidden;
+  transition: width 300ms ease-in-out, visibility 300ms ease-in-out;
+}
+
+.category:hover::after,
+.category:focus::after {
+  visibility: visible;
+  width: 100%;
+}
+/* Exclude transition when the category is active */
+.category.active::after,
+.category.active:focus::after {
+  transition: width 0s ease-in-out, visibility 0s ease-in-out;
+}
+
+.active {
+  border-bottom: 1px solid var(--clr-light);
+  pointer-events: none;
+}
+.active_nav {
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--clr-light);
+  pointer-events: none;
+}
+.cover_text_date {
+  font-size: 0.8em;
+  font-style: italic;
+}
