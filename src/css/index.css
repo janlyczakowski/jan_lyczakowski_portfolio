@@ -57,6 +57,17 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.inactive {
+  filter: blur(4px);
+  pointer-events: none;
+  opacity: 0.8;
+}
+.active {
+  filter: none;
+  pointer-events: all;
+  opacity: 1;
+}
 :focus {
   outline: 3px solid var(--clr-grey);
   outline-offset: 3px;

@@ -3,10 +3,10 @@ import { Link, useLocation } from 'react-router-dom';
 import '../css/index.css';
 import styles from '../css/Navigation.module.css';
 
-function Navigation() {
+function Navigation(props) {
   const location = useLocation();
   const { pathname } = location;
-  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const { mobileNavOpen, setMobileNavOpen } = props;
 
   const listItems = [
     { to: '/', id: 'home', text: 'Home' },
