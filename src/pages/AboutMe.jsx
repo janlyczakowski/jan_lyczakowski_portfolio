@@ -55,8 +55,8 @@ function AboutMe() {
             <span className={styles.city} onClick={onClickHandler}>
               Genoa
             </span>{' '}
-            (Italy) where eventually I stayed to work as Front-End Web Developer
-            for 6 months more.
+            (Italy) where eventually I stayed to work as Front-End Developer for
+            6 months more.
           </p>
           <p className={styles.section_intro_text}>
             In October 2022 I started the{' '}
@@ -91,12 +91,17 @@ function AboutMe() {
               {' '}
               Vienna
             </span>{' '}
-            where I will write on my Master's thesis.
+            where I will work on my Master's thesis.
           </p>
           <p className={styles.section_intro_text}>
             I am fascinated with maps, especially combining cartography with
             computer science. I love making web maps and I am in particular
-            interested in location-based services and 3D mapping.
+            interested in 3D mapping and location-based services.
+          </p>
+          <p className={styles.section_intro_text}>
+            In my free time, I like to go hiking in nature in particular, I am
+            keen on excursions to the mountains. I am also an amateur video
+            maker and piano player.
           </p>
         </div>
         <img
