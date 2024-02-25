@@ -4,8 +4,8 @@ import corsicaMap from '../resources/img/corsica_map.pdf';
 import hogwartsImg from '../resources/img/hogwarts500x500.jpg';
 import datalabImg from '../resources/img/datalab500x500.png';
 import notebookImg from '../resources/img/notebook500x500.png';
-import jazzClubImg from '../resources/img/seb500x500.png';
-import earthquakesImg from '../resources/img/earthquake500x500.png';
+// import jazzClubImg from '../resources/img/seb500x500.png';
+// import earthquakesImg from '../resources/img/earthquake500x500.png';
 import glidersImg from '../resources/img/gliders500x500.png';
 import mayorEnigmaImg from '../resources/img/mayor_enigma_icon.png';
 
@@ -68,16 +68,16 @@ export const PORTFOLIO_ITEMS = [
     coverText: 'Datalab - SDG Monitoring Dashboard',
     date: 'May 2022',
   },
-  {
-    navigateTo: 'mywork/earthquakes',
-    dataSpec: ['all', 'html', 'css', 'javascript', 'leaflet'],
-    dataGen: ['all', 'geo-spatial'],
-    dataAttribute: 'earthquakes',
-    srcImg: earthquakesImg,
-    altImg: 'A map of the earthquakes',
-    coverText: 'Latest worldwide earthquakes',
-    date: 'May 2021',
-  },
+  // {
+  //   navigateTo: 'mywork/earthquakes',
+  //   dataSpec: ['all', 'html', 'css', 'javascript', 'leaflet'],
+  //   dataGen: ['all', 'geo-spatial'],
+  //   dataAttribute: 'earthquakes',
+  //   srcImg: earthquakesImg,
+  //   altImg: 'A map of the earthquakes',
+  //   coverText: 'Latest worldwide earthquakes',
+  //   date: 'May 2021',
+  // },
   {
     navigateTo: 'mywork/notebook',
     dataSpec: ['all', 'html', 'css', 'javascript'],
@@ -88,16 +88,16 @@ export const PORTFOLIO_ITEMS = [
     coverText: 'Notebook',
     date: 'April 2021',
   },
-  {
-    navigateTo: 'mywork/jazz_club',
-    dataSpec: ['all', 'html', 'css', 'javascript'],
-    dataGen: ['all', 'other'],
-    dataAttribute: 'sebs',
-    srcImg: jazzClubImg,
-    altImg: "Seb's jazz club",
-    coverText: `Seb's jazz club`,
-    date: 'March 2021',
-  },
+  // {
+  //   navigateTo: 'mywork/jazz_club',
+  //   dataSpec: ['all', 'html', 'css', 'javascript'],
+  //   dataGen: ['all', 'other'],
+  //   dataAttribute: 'sebs',
+  //   srcImg: jazzClubImg,
+  //   altImg: "Seb's jazz club",
+  //   coverText: `Seb's jazz club`,
+  //   date: 'March 2021',
+  // },
   {
     navigateTo: 'mywork/gliders',
     dataSpec: ['all', 'java', 'luciadlightspeed'],
@@ -177,19 +177,19 @@ export const PORTFOLIO_PAGE_5 = {
   link: 'https://sdgcittametropolitana.mi.it/',
 };
 
-export const PORTFOLIO_PAGE_4 = {
-  title: 'Latest worldwide earthquakes',
-  subtitle: 'Interactive map',
-  date: 'May 2021',
-  srcImg: earthquakesImg,
-  altImg: 'Latest worldwide earthquakes',
-  description: [
-    'This map-based application shows the latest worldwide earthquakes. The user interface contains a couple of functionalities like filtering by magnitude, by name and counting earthquakes in the country. Additionally, there are displayed basic information on each earthquake that the user clicks on.',
-    'The aim of this project was to get familiarized with the Leaflet library and keep on practising with JavaScript.',
-  ],
-  technology: 'HTML, CSS, JavaScript, Leaflet',
-  link: 'https://latestworldwideearthquakesjanlyczakowski.netlify.app/',
-};
+// export const PORTFOLIO_PAGE_4 = {
+//   title: 'Latest worldwide earthquakes',
+//   subtitle: 'Interactive map',
+//   date: 'May 2021',
+//   srcImg: earthquakesImg,
+//   altImg: 'Latest worldwide earthquakes',
+//   description: [
+//     'This map-based application shows the latest worldwide earthquakes. The user interface contains a couple of functionalities like filtering by magnitude, by name and counting earthquakes in the country. Additionally, there are displayed basic information on each earthquake that the user clicks on.',
+//     'The aim of this project was to get familiarized with the Leaflet library and keep on practising with JavaScript.',
+//   ],
+//   technology: 'HTML, CSS, JavaScript, Leaflet',
+//   link: 'https://latestworldwideearthquakesjanlyczakowski.netlify.app/',
+// };
 
 export const PORTFOLIO_PAGE_3 = {
   title: 'Notebook',
@@ -203,18 +203,18 @@ export const PORTFOLIO_PAGE_3 = {
   technology: 'HTML, CSS, JavaScript',
   link: 'https://notebookjanlyczakowski.netlify.app/',
 };
-export const PORTFOLIO_PAGE_2 = {
-  title: `Seb's jazz club`,
-  subtitle: 'Website',
-  date: 'March 2021',
-  srcImg: jazzClubImg,
-  altImg: "Seb's jazz club website",
-  description: [
-    'This project aimed to put my theoretical knowledge in HTML, CSS and JavaScript into practice. It was one of my first websites ever made. The website is fully responsive and mobile adjusted. The idea of making this website was taken directly from the LaLaLand movie and its famous jazz club Seb’s. All the information about the club and the musicians were made up. Though the fans of LaLaLand will surely find a grain of truth in it.',
-  ],
-  technology: 'HTML, CSS, JavaScript',
-  link: 'https://sebsjazzclubjanlyczakowski.netlify.app/',
-};
+// export const PORTFOLIO_PAGE_2 = {
+//   title: `Seb's jazz club`,
+//   subtitle: 'Website',
+//   date: 'March 2021',
+//   srcImg: jazzClubImg,
+//   altImg: "Seb's jazz club website",
+//   description: [
+//     'This project aimed to put my theoretical knowledge in HTML, CSS and JavaScript into practice. It was one of my first websites ever made. The website is fully responsive and mobile adjusted. The idea of making this website was taken directly from the LaLaLand movie and its famous jazz club Seb’s. All the information about the club and the musicians were made up. Though the fans of LaLaLand will surely find a grain of truth in it.',
+//   ],
+//   technology: 'HTML, CSS, JavaScript',
+//   link: 'https://sebsjazzclubjanlyczakowski.netlify.app/',
+// };
 
 export const PORTFOLIO_PAGE_1 = {
   title: `An analysis of the possibilities of geospatial dynamic data’s

@@ -13,9 +13,9 @@ import {
   PORTFOLIO_PAGE_7,
   PORTFOLIO_PAGE_6,
   PORTFOLIO_PAGE_5,
-  PORTFOLIO_PAGE_4,
+  // PORTFOLIO_PAGE_4,
   PORTFOLIO_PAGE_3,
-  PORTFOLIO_PAGE_2,
+  // PORTFOLIO_PAGE_2,
   PORTFOLIO_PAGE_1,
 } from './utils/constants';
 
@@ -57,18 +57,18 @@ const router = createHashRouter([
     path: 'mywork/datalab_milan',
     element: <MyProject content={PORTFOLIO_PAGE_5} />,
   },
-  {
-    path: 'mywork/earthquakes',
-    element: <MyProject content={PORTFOLIO_PAGE_4} />,
-  },
+  // {
+  //   path: 'mywork/earthquakes',
+  //   element: <MyProject content={PORTFOLIO_PAGE_4} />,
+  // },
   {
     path: 'mywork/notebook',
     element: <MyProject content={PORTFOLIO_PAGE_3} />,
   },
-  {
-    path: 'mywork/jazz_club',
-    element: <MyProject content={PORTFOLIO_PAGE_2} />,
-  },
+  // {
+  //   path: 'mywork/jazz_club',
+  //   element: <MyProject content={PORTFOLIO_PAGE_2} />,
+  // },
   {
     path: 'mywork/gliders',
     element: <MyProject content={PORTFOLIO_PAGE_1} />,
