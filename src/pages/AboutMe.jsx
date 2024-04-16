@@ -42,7 +42,7 @@ function AboutMe() {
           </p>
           <p className={styles.section_intro_text}>
             After graduation I did 7 months-internship, learning development of
-            webGIS applications at{' '}
+            Web GIS applications at{' '}
             <a
               href="https://www.colouree.com/it/"
               target="_blank"
@@ -86,16 +86,17 @@ function AboutMe() {
               {' '}
               Dresden
             </span>
-            . The last semester I am going to spend again in
+            . Currently, I am writing my Master’s thesis during the last
+            semester at the Technical University of{' '}
             <span className={styles.city} onClick={onClickHandler}>
               {' '}
               Vienna
             </span>{' '}
-            where I will work on my Master's thesis.
+            .
           </p>
           <p className={styles.section_intro_text}>
             I am fascinated with maps, especially combining cartography with
-            computer science. I love making web maps and I am in particular
+            computer science. I love making web apps and I am in particular
             interested in 3D mapping and location-based services.
           </p>
           <p className={styles.section_intro_text}>
