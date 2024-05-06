@@ -22,19 +22,6 @@ function MyInterests() {
           </div>
         </div>
 
-        <div className={`${styles.interest} ${styles.interest_web}`}>
-          <img
-            className={`${styles.interest_img} ${styles.web_img}`}
-            src={webIcon}
-            alt="An icon of the computer with a screen"
-          />
-          <div className={styles.description_container}>
-            <h3 className={styles.interest_description}>
-              Web / GIS development
-            </h3>
-          </div>
-        </div>
-
         <div className={styles.interest}>
           <img
             className={styles.interest_img}
@@ -45,6 +32,17 @@ function MyInterests() {
             <h3 className={styles.interest_description}>
               Location-based services
             </h3>
+          </div>
+        </div>
+
+        <div className={`${styles.interest} ${styles.interest_web}`}>
+          <img
+            className={`${styles.interest_img} ${styles.web_img}`}
+            src={webIcon}
+            alt="An icon of the computer with a screen"
+          />
+          <div className={styles.description_container}>
+            <h3 className={styles.interest_description}>Web GIS</h3>
           </div>
         </div>
       </div>
