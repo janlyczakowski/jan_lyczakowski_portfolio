@@ -11,7 +11,7 @@ function Navigation(props) {
   const listItems = [
     { to: '/', id: 'home', text: 'Home' },
     { to: '/about_me', id: 'about_me', text: 'About me' },
-    { to: '/contact', id: 'contact', text: 'Contact' },
+    { to: '/map', id: 'map', text: 'Map' },
   ];
 
   const onClickHamburgerHandler = () => {

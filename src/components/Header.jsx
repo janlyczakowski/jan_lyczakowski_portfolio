@@ -33,7 +33,7 @@ function Header() {
         <h1 className={styles.title_picture}>Jan Łyczakowski</h1>
         <FontAwesomeIcon icon={faChevronDown} className={arrowStyle} />
       </div>
-      <h1 className={styles.title_picture_mobile}>Jan Łyczakowski</h1>
+      {/* <h1 className={styles.title_picture_mobile}>Jan Łyczakowski</h1> */}
     </header>
   );
 }

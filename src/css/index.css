@@ -7,20 +7,34 @@
 /* Custom Properties*/
 :root {
   --ff-primary: 'Lato', sans-serif;
-  --ff-secondary: 'Source Code Pro', monospace;
-  --ff-tertiary: 'Source Sans Pro', sans-serif;
+  --ff-secondary: 'Karla', sans-serif;
+  --ff-tertiary: 'Source Code Pro', monospace;
 
   --fw-reg: 300;
   --fw-bold: 500;
+  --fw-extra-bold: 700;
 
-  --clr-light: #fff;
+  --clr-background-light: #fffbf7;
+  --clr-background-dark: #174538;
+
+  --clr-bright-text: #fffbf7;
+  --clr-dark-text: #4e4941;
+  --clr-dark-color-text: #174538;
+
+  --clr-light-highlight-one: #ddf299;
+  --clr-light-highlight-two: #e7dafe;
+  --clr-light-highlight-three: #6713f9;
+  --clr-light-highlight-four: #b9e42b;
+
+  /* --clr-light: #fff;
   --clr-dark: #000000;
-  --clr-grey: rgb(155, 155, 155); /*#eee*/
+  --clr-grey: rgb(155, 155, 155);  */
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
+  --fs-body-small: 0.9rem;
 
   --bs: 0.25em 0.25em 0.75em rgba(209, 209, 209, 0.25),
     0.125em 0.125em 0.25em rgba(209, 209, 209, 0.15);
@@ -44,8 +58,8 @@ html {
 body {
   overflow-x: hidden;
   margin: 0;
-  background: var(--clr-dark);
-  color: var(--clr-light);
+  background: var(--clr-background-light);
+  color: var(--clr-bright-text);
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
   line-height: 1.6;
@@ -69,7 +83,7 @@ img {
   opacity: 1;
 }
 :focus {
-  outline: 3px solid var(--clr-grey);
+  outline: 3px solid 'red';
   outline-offset: 3px;
 }
 
@@ -115,7 +129,7 @@ section.cv-section {
 .section__title {
   font-weight: var(--fw-reg);
   font-style: italic;
-  color: var(--clr-light);
+  color: red;
   text-align: center;
 }
 .section__subtitle {
@@ -127,8 +141,8 @@ section.cv-section {
   content: '';
   display: block;
   height: 1px;
-  color: var(--clr-grey);
-  background: var(--clr-light);
+  color: red;
+  background: var(--clr-background-light);
   opacity: 1;
 }
 .section__title::after {

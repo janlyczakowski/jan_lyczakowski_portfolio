@@ -4,9 +4,9 @@ import './css/index.css';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home';
 import AboutMe from './pages/AboutMe';
-import Contact from './pages/Contact';
 import Credits from './pages/Credits';
 import MyProject from './components/MyProject';
+import Map from './pages/Map';
 import {
   PORTFOLIO_PAGE_9,
   PORTFOLIO_PAGE_8,
@@ -30,8 +30,8 @@ const router = createHashRouter([
     element: <AboutMe />,
   },
   {
-    path: 'contact',
-    element: <Contact />,
+    path: 'map',
+    element: <Map />,
   },
   {
     path: 'credits',
