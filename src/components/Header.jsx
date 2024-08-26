@@ -30,10 +30,17 @@ function Header() {
   return (
     <header>
       <div className={styles.img_container} id={styles['home']}>
-        <h1 className={styles.title_picture}>Jan Łyczakowski</h1>
+        <div className={styles.title_container}>
+          <h1 className={styles.title_picture}>Jan Łyczakowski</h1>
+          <ul className={styles.subtitle_list}>
+            <li className={styles.subtitle}>Cartographer</li>
+            <li className={styles.subtitle}>GIS Developer</li>
+            <li className={styles.subtitle}>Front-end Developer</li>
+          </ul>
+        </div>
+
         <FontAwesomeIcon icon={faChevronDown} className={arrowStyle} />
       </div>
-      {/* <h1 className={styles.title_picture_mobile}>Jan Łyczakowski</h1> */}
     </header>
   );
 }

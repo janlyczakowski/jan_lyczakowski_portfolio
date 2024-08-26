@@ -39,17 +39,36 @@
 }
 
 .title_picture {
+  font-size: 1.4rem;
+  font-weight: var(--fw-extra-bold);
+  color: var(--clr-dark-text);
+  font-family: var(--ff-secondary);
+  margin-bottom: 0.5em;
+}
+
+.title_container {
   position: absolute;
   top: 43%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1.6rem;
-  /* letter-spacing: 5px; */
-  font-weight: var(--fw-extra-bold);
-  /* text-shadow: 1px 1px 2px rgb(255, 255, 255); */
+  width: 100%;
+  max-width: 220px;
+}
+
+.subtitle_list {
+  display: flex;
+  padding: 0;
+  justify-content: space-around;
   color: var(--clr-dark-text);
-  font-family: var(--ff-secondary);
-  /* max-width: 300px; */
+  list-style: none;
+  font-weight: var(--fw-extra-bold);
+  font-size: 0.4rem;
+  text-transform: uppercase;
+}
+.subtitle {
+  padding: 0 0.5em;
+  border: 1px solid var(--clr-dark-text);
+  border-radius: 3em;
 }
 /* .title_picture_mobile {
   display: none;
@@ -76,37 +95,63 @@
   .title_picture {
     font-size: 1.8rem;
   }
+  .title_container {
+    max-width: 270px;
+  }
+  .subtitle_list {
+    font-size: 0.48rem;
+  }
 }
 @media screen and (min-width: 400px) {
   .title_picture {
     font-size: 2rem;
+  }
+  .title_container {
+    max-width: 340px;
+  }
+  .subtitle_list {
+    font-size: 0.6rem;
   }
 }
 @media screen and (min-width: 600px) {
   .title_picture {
     font-size: 2.25rem;
   }
+  .title_container {
+    max-width: 380px;
+  }
+  .subtitle_list {
+    font-size: 0.7rem;
+  }
 }
 @media screen and (min-width: 800px) {
   .title_picture {
     font-size: 2.7rem;
+  }
+  .title_container {
+    max-width: 430px;
+  }
+  .subtitle_list {
+    font-size: 0.8rem;
   }
 }
 @media screen and (min-width: 1100px) {
   .title_picture {
     font-size: 3rem;
   }
+  .title_container {
+    max-width: 450px;
+  }
+  .subtitle_list {
+    font-size: 0.85rem;
+  }
 }
 @media screen and (min-width: 1200px) {
   .img_container {
     /* map scale: 1:10k */
     background-image: url('../resources/img/home/1_10k.jpg');
+    /* background-size: contain; */
   }
-  /* .img_container {
-    height: 100vh;
-    background-position: center 30px;
-    background-size: cover;
-  } */
 }
 
 @media screen and (min-width: 1600px) {

@@ -4,7 +4,6 @@ import './css/index.css';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home';
 import AboutMe from './pages/AboutMe';
-import Credits from './pages/Credits';
 import MyProject from './components/MyProject';
 import Map from './pages/Map';
 import {
@@ -32,10 +31,6 @@ const router = createHashRouter([
   {
     path: 'map',
     element: <Map />,
-  },
-  {
-    path: 'credits',
-    element: <Credits />,
   },
   {
     path: 'mywork/mayor_enigma',
@@ -72,10 +67,6 @@ const router = createHashRouter([
   {
     path: 'mywork/gliders',
     element: <MyProject content={PORTFOLIO_PAGE_1} />,
-  },
-  {
-    path: 'credits',
-    element: <Credits />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
