@@ -123,6 +123,7 @@
 @media screen and (min-width: 400px) {
   .icon {
     font-size: 1.5rem;
+    margin-right: 2em;
   }
 }
 
@@ -133,6 +134,7 @@
   }
   .icon {
     font-size: 2rem;
+    margin-right: 2.5em;
   }
 }
 @media screen and (min-width: 630px) {
@@ -148,6 +150,20 @@
     margin-bottom: 3em;
   }
 
+  .icon {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .icon {
+    margin-right: 4em;
+  }
+  .categories_icons {
+    animation: slide 40s infinite linear;
+  }
+}
+
+@media screen and (min-width: 1400px) {
   .icon {
     font-size: 3rem;
   }
