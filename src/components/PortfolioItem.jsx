@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../css/MyWork.module.css';
 
@@ -8,8 +8,6 @@ function PortfolioItem(props) {
   const {
     navigateTo,
     category,
-    dataSpec,
-    dataGen,
     dataAttribute,
     srcImg,
     altImg,
