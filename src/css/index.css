@@ -13,6 +13,7 @@
   --fw-reg: 300;
   --fw-bold: 500;
   --fw-extra-bold: 700;
+  /* --fw-extra-extra-bold: 800; */
 
   --clr-background-light: #fffbf7;
   --clr-background-dark: #174538;
@@ -23,7 +24,7 @@
 
   --clr-light-highlight-one: #ddf299;
   --clr-light-highlight-two: #e7dafe;
-  --clr-light-highlight-three: #6713f9;
+  --clr-light-highlight-three: #7c33fa;
   --clr-light-highlight-four: #b9e42b;
 
   --fs-h1: 3rem;
@@ -105,7 +106,7 @@ h3 {
 /*General*/
 
 section {
-  padding: 4em 2em;
+  padding: 6em 2em;
   max-width: 1100px;
   margin: auto;
 }
@@ -122,7 +123,7 @@ section:last-of-type,
   font-weight: var(--fw-extra-bold);
   color: var(--clr-dark-color-text);
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 0.75em;
 }
 /* .section_subtitle {
   font-size: var(--fs-h3);

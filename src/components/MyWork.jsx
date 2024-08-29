@@ -5,91 +5,86 @@ import { PORTFOLIO_ITEMS } from '../utils/constants';
 import styles from '../css/MyWork.module.css';
 
 function MyWork() {
-  const [currentGenericCategory, setCurrentGenericCategory] = useState('all');
-  const [currentTechCategory, setCurrentTechCategory] = useState('all');
+  // Initial categories
+  const categories = ['software development', 'static maps'];
 
-  const handleCategoryChange = (category, type) => {
-    if (type === 'generic_category') {
-      setCurrentGenericCategory(category);
-    } else {
-      setCurrentTechCategory(category);
-    }
+  // Initialize state with all categories active
+  const initialActiveCategories = {};
+  categories.forEach((category) => {
+    initialActiveCategories[category] = true;
+  });
+
+  const [activeCategories, setActiveCategories] = useState(
+    initialActiveCategories
+  );
+  const [clickedCategory, setClickedCategory] = useState(null);
+
+  // Toggle active status of a category
+  const toggleCategory = (category) => {
+    setActiveCategories((prevState) => {
+      const newState = { ...prevState, [category]: !prevState[category] };
+      // Ensure at least one category remains active
+      const activeCount = Object.values(newState).filter(Boolean).length;
+      if (activeCount === 0) {
+        newState[category] = true;
+      }
+      return newState;
+    });
+    setClickedCategory(category);
+  };
+  // Check if there is at least one other active category
+  const hasOtherActiveCategories = (category) => {
+    return (
+      Object.values(activeCategories).filter((isActive, index) => {
+        const currentCategory = categories[index];
+        return isActive && currentCategory !== category;
+      }).length > 0
+    );
   };
 
-  const isCategoryActive = (category, type) => {
-    if (type === 'generic_category') {
-      return currentGenericCategory === category;
-    } else {
-      return currentTechCategory === category;
-    }
+  // Handle mouse leave to reset clicked state
+  const handleMouseLeave = () => {
+    setClickedCategory(null);
   };
 
   return (
     <section id={styles['work']}>
-      <h2 className={'section__title'}>My work</h2>
-      <ul className={`${styles.categories} ${styles.generic_categories}`}>
-        {['all', 'geo-spatial', 'other'].map((category) => (
+      <h2 className={'section_title'}>Selected work</h2>
+      <ul className={styles.categories}>
+        {categories.map((category) => (
           <li
             key={category}
             className={`${styles.category} ${
-              isCategoryActive(category, 'generic_category') && styles.active
-            }`}
-            onClick={() => handleCategoryChange(category, 'generic_category')}
-            data-filter="generic_category"
-            id={category}
+              activeCategories[category] ? styles.active : styles.inactive
+            } ${
+              activeCategories[category] && hasOtherActiveCategories(category)
+                ? styles.canHover
+                : ''
+            } ${clickedCategory === category ? styles.clicked : ''}`}
+            onClick={() => toggleCategory(category)}
+            onMouseLeave={handleMouseLeave}
+            id={styles[`${category.split(' ')[0]}_${category.split(' ')[1]}`]}
           >
             {category}
           </li>
         ))}
       </ul>
-
-      <ul className={styles.categories}>
-        {[
-          'all',
-          'html',
-          'css',
-          'javascript',
-          'three js',
-          'leaflet',
-          'react',
-          'java',
-          'luciadlightspeed',
-          'arcgis pro',
-          'adobe',
-        ].map((category) => (
-          <li
-            key={category}
-            className={`${styles.category} ${
-              isCategoryActive(category, 'category_tech') && styles.active
-            }`}
-            onClick={() => handleCategoryChange(category, 'category_tech')}
-            data-filter="category_tech"
-            id={category}
-          >
-            {category.charAt(0).toUpperCase() + category.slice(1)}
-          </li>
-        ))}
-      </ul>
-      <div className={styles.portfolio}>
-        {PORTFOLIO_ITEMS.map((item, index) => {
-          const dataSpecCorrect = item.dataSpec.includes(currentTechCategory);
-          const dataGenCorrect = item.dataGen.includes(currentGenericCategory);
-          const elementVisible = dataSpecCorrect && dataGenCorrect;
-
-          return elementVisible ? (
+      <div className={styles.projects_container}>
+        {PORTFOLIO_ITEMS.filter((item) => activeCategories[item.category]).map(
+          (item, index) => (
             <PortfolioItem
               key={index}
               navigateTo={item.navigateTo}
-              dataSpec={item.dataSpec}
-              dataGen={item.dataGen}
+              category={item.category}
               dataAttribute={item.dataAttribute}
               srcImg={item.srcImg}
               altImg={item.altImg}
-              coverText={item.coverText}
+              title={item.title}
               date={item.date}
+              keywords={item.keywords}
             />
-          ) : null;
-        })}
+          )
+        )}
       </div>
     </section>
   );
