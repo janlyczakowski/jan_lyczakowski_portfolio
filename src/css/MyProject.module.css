@@ -1,99 +1,240 @@
-.section_intro_subtitle:first-of-type {
-  margin: 3em 0 1em 0;
+.intro_portfolio_item {
+  color: var(--clr-dark-color-text);
+  max-width: 650px;
 }
-.section_intro_subtitle {
+
+.project_title {
+  font-size: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto 0.5em auto;
+  color: var(--clr-dark-color-text);
+}
+
+.project_subtitle_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3em;
+}
+.project_type,
+.project_date {
+  font-size: 0.7em;
+  padding: 0.25em 0.75em;
+  border-radius: 5px;
+}
+.project_type {
+  font-weight: var(--fw-extra-bold);
   text-transform: uppercase;
+  margin: 0 1em 0 0;
+}
+.project_date {
   font-weight: var(--fw-bold);
+  margin: 0;
+}
+.project_type.software_development {
+  background-color: var(--clr-light-highlight-one);
+}
+.project_date.software_development {
+  border: 1px solid var(--clr-light-highlight-one);
+}
+.project_type.static_maps {
+  background-color: var(--clr-light-highlight-two);
+}
+.project_date.static_maps {
+  border: 1px solid var(--clr-light-highlight-two);
+}
+.description {
+  color: var(--clr-dark-color-text);
+  font-weight: 600;
+  text-align: justify;
+  font-size: 0.8rem;
+  margin: 0 auto 1em auto;
+}
+.description:last-of-type {
+  margin-bottom: 2em;
+}
+.links {
+  list-style: none;
+  padding: 0;
+}
+.online,
+.github {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 1.25rem;
+  margin-right: 1em;
+  transition: color 0.25s ease-in-out;
+}
+.icon.software_development {
+  color: #d7ec93;
+}
+.icon.static_maps {
+  color: #ddc9ff;
+}
+
+.link_description {
+  color: var(--clr-dark-color-text);
   font-style: italic;
+  font-size: 0.8rem;
+}
+.link {
+  color: var(--clr-dark-color-text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--clr-dark-color-text);
+}
+
+.section_subtitle {
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+  font-weight: var(--fw-extra-bold);
   font-size: var(--fs-h3);
 }
-.section__title_intro_portfolio_item {
-  max-width: 500px;
-  margin: auto;
+.tech_container {
+  margin-bottom: 4em;
 }
-.section__title_intro_portfolio_item::after {
-  margin: 0.5em auto 0.5em;
+.tech_list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
 }
-.portfolio_item_subtitle {
-  font-size: 1.125em;
+.tech_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  max-width: 60px;
+  margin-right: 1em;
+}
+.tech_item:last-of-type {
+  margin-right: 0;
+}
+.tech_icon {
+  font-size: 1.25rem;
+  color: var(--clr-dark-color-text);
+}
+.tech_name {
+  font-size: 0.8rem;
   text-align: center;
-  margin: 0 0 4em 0;
+  font-style: italic;
+  font-weight: var(--fw-bold);
 }
-.portfolio_item_date {
-  font-size: 0.75em;
+.portofolio_picture_container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
 }
-#about_portfolio_item {
-  margin-top: 0;
-}
-.intro_portfolio_item .section_intro_content {
-  margin: 0;
-}
-.portfolio_item_link {
-  text-decoration: none;
-  color: inherit;
-}
-.portfolio_item_link:hover {
-  opacity: 0.7;
-  text-decoration: underline;
-}
-.portfolio_picture,
-.list-element-img {
+.portfolio_picture {
   object-fit: cover;
   box-shadow: var(--bs);
-  max-width: 70%;
   margin: 0 auto 3em auto;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  max-height: 400px;
 }
-.list-element-img {
-  margin: 0;
-}
-.no_margin_top {
-  margin-top: 0;
-}
-@media screen and (min-width: 800px) {
+
+@media screen and (min-width: 300px) {
   .intro_portfolio_item {
-    display: grid;
-    grid-template-columns: 3fr 0.5fr 400px;
-    grid-template-areas:
-      'title title title'
-      'subtitle subtitle subtitle'
-      'about . img'
-      'about_content . img'
-      'tech . img'
-      'tech_content . img'
-      'online . img'
-      'online_content . img';
+    padding: 6em 3em;
   }
-  .section__title_intro_portfolio_item {
+}
+@media screen and (min-width: 400px) {
+  .project_title {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (min-width: 500px) {
+  .icon,
+  .tech_icon {
+    font-size: 1.5rem;
+  }
+  .tech_name {
+    font-size: 0.9rem;
+  }
+  .tech_item {
+    max-width: 70px;
+  }
+  .description {
+    font-size: 0.9rem;
+  }
+  .link_description {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .project_title {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .intro_portfolio_item {
+    padding-top: 8em;
+    max-width: 1100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3.5fr 3rem minmax(350px, 3fr);
+    grid-template-areas:
+      'title . img'
+      'subtitle . img'
+      'about . img'
+      'links . .'
+      'tech . .'
+      'tech_content tech_content .';
+  }
+  .project_title {
+    font-size: 2.5rem;
     grid-area: title;
-    padding: 1em 1em 0 1em;
+    text-align: left;
+    margin: 0 0 0.5em 0;
     max-width: 100%;
   }
-  .portfolio_item_subtitle {
+  .project_subtitle_container {
     grid-area: subtitle;
-    margin: 0 0 6em 0;
+    justify-content: left;
   }
-  .portfolio_picture {
+  .portofolio_picture_container {
     grid-area: img;
-    margin: 0;
-    min-width: 100%;
-    min-height: 400px;
+    max-width: 450px;
   }
-  .portfolio_item_about {
+  .description_container {
     grid-area: about;
   }
-  .about_content {
-    grid-area: about_content;
+  .links {
+    grid-area: links;
   }
-  .portfolio_item_tech {
+  .section_subtitle {
+    margin-top: 1em;
+    margin-bottom: 0;
     grid-area: tech;
   }
-  .tech_content {
+  .tech_container {
     grid-area: tech_content;
+    margin-bottom: 0;
   }
   .portfolio_item_online {
     grid-area: online;
   }
   .online_content {
     grid-area: online_content;
+  }
+  .tech_icon {
+    font-size: 2rem;
+  }
+  .project_type,
+  .project_date {
+    font-size: 0.75em;
+  }
+  .icon {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .intro_portfolio_item {
+    max-width: 1300px;
   }
 }

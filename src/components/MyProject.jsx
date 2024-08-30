@@ -1,4 +1,7 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Layout from './Layout';
 import styles from '../css/MyProject.module.css';
 import '../css/index.css';
@@ -13,71 +16,109 @@ function MyProject(props) {
     altImg,
     description,
     technology,
-    link,
+    category,
+    link_online,
+    link_github,
   } = content;
 
   return (
     <Layout>
-      <section
-        className={`${styles.intro_portfolio_item}`}
-        id={styles['about']}
-      >
-        <h2
-          className={`section__title ${styles.section__title_intro_portfolio_item}`}
-        >
-          {title}
-        </h2>
-        <p className={`${styles.portfolio_item_subtitle}`}>
-          {subtitle} <br />
-          <span className={`${styles.portfolio_item_date}`}>{date}</span>
-        </p>
-        <img
-          src={srcImg}
-          className={`${styles.portfolio_picture}`}
-          alt={altImg}
-        />
-        <p
-          className={`${styles.section_intro_subtitle} ${styles.portfolio_item_about}`}
-          id={styles['about_portfolio_item']}
-        >
-          About
-        </p>
-        <div
-          className={`${styles.section_intro_content} ${styles.about_content}`}
-        >
+      <section className={`${styles.intro_portfolio_item}`}>
+        <h2 className={`section_title ${styles.project_title}`}>{title}</h2>
+        <div className={styles.project_subtitle_container}>
+          <p
+            className={`${styles.project_type} ${[
+              styles[`${category.split(' ')[0]}_${category.split(' ')[1]}`],
+            ]}`}
+          >
+            {subtitle}
+          </p>
+          <p
+            className={`${styles.project_date} ${[
+              styles[`${category.split(' ')[0]}_${category.split(' ')[1]}`],
+            ]}`}
+          >
+            {date}
+          </p>
+        </div>
+        <div className={styles.description_container}>
           {description.map((line, index) => {
             return (
-              <p className={styles.no_margin_top} key={index}>
+              <p className={styles.description} key={index}>
                 {line}
               </p>
             );
           })}
         </div>
-        <p
-          className={`${styles.section_intro_subtitle} ${styles.portfolio_item_tech}`}
-        >
-          Technology
-        </p>
-        <p className={`${styles.section_intro_content} ${styles.tech_content}`}>
+        <ul className={styles.links}>
+          {link_online !== '' && (
+            <li className={styles.online}>
+              <FontAwesomeIcon
+                icon={faGlobe}
+                className={`${styles.icon} ${[
+                  styles[`${category.split(' ')[0]}_${category.split(' ')[1]}`],
+                ]}`}
+              />
+              <p className={styles.link_description}>
+                Click{' '}
+                <a
+                  href={link_online}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.link}
+                >
+                  here
+                </a>{' '}
+                to find it online
+              </p>
+            </li>
+          )}
+          {link_github !== '' && (
+            <li className={styles.github}>
+              <FontAwesomeIcon
+                icon={faGithub}
+                className={`${styles.icon} ${[
+                  styles[`${category.split(' ')[0]}_${category.split(' ')[1]}`],
+                ]}`}
+              />
+              <p className={styles.link_description}>
+                Click{' '}
+                <a
+                  href={link_github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles.link}
+                >
+                  here
+                </a>{' '}
+                to check the code
+              </p>
+            </li>
+          )}
+        </ul>
+        <p className={styles.section_subtitle}>Technology</p>
+        <div className={styles.tech_container}>
+          <ul className={styles.tech_list}>
+            {technology.map((item) => {
+              return (
+                <li className={styles.tech_item} key={item.text}>
+                  <div className={styles.tech_icon}>{item.icon}</div>
+                  <p className={styles.tech_name}>{item.text}</p>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        {/* <p className={`${styles.section_intro_content} ${styles.tech_content}`}>
           {technology}
-        </p>
-        <p
-          className={`${styles.section_intro_subtitle} ${styles.portfolio_item_online}`}
-        >
-          Online
-        </p>
-        <p
-          className={`${styles.section_intro_content} ${styles.online_content}`}
-        >
-          <a
-            href={link}
-            className={`${styles.portfolio_item_link}`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Click here
-          </a>
-        </p>
+        </p> */}
+        <div className={styles.portofolio_picture_container}>
+          <img
+            src={srcImg}
+            className={`${styles.portfolio_picture}`}
+            alt={altImg}
+          />
+        </div>
       </section>
     </Layout>
   );

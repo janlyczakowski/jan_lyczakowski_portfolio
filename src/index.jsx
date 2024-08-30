@@ -7,6 +7,7 @@ import AboutMe from './pages/AboutMe';
 import MyProject from './components/MyProject';
 import Map from './pages/Map';
 import {
+  PORTFOLIO_PAGE_10,
   PORTFOLIO_PAGE_9,
   PORTFOLIO_PAGE_8,
   PORTFOLIO_PAGE_7,
@@ -31,6 +32,10 @@ const router = createHashRouter([
   {
     path: 'map',
     element: <Map />,
+  },
+  {
+    path: 'mywork/context_awareness',
+    element: <MyProject content={PORTFOLIO_PAGE_10} />,
   },
   {
     path: 'mywork/mayor_enigma',

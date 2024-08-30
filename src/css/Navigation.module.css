@@ -45,14 +45,14 @@
   width: 100%;
   height: 30vh;
   z-index: 1;
-  color: var(--clr-dark-text);
+  color: var(--clr-dark-color-text);
   background: var(--clr-background-light);
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 }
 .active_nav {
   padding-bottom: 3px;
-  border-bottom: 2px solid var(--clr-dark-text);
+  border-bottom: 2px solid var(--clr-dark-color-text);
   pointer-events: none;
 }
 .open_nav.nav {
@@ -97,8 +97,8 @@
   display: block;
   height: 1px;
   width: 0;
-  color: var(--clr-dark-text);
-  background: var(--clr-dark-text);
+  color: var(--clr-dark-color-text);
+  background: var(--clr-dark-color-text);
   visibility: hidden;
   transition: width 300ms ease-in-out, visibility 300ms ease-in-out;
 }
@@ -121,14 +121,14 @@
     height: 0;
     transform: translateX(0);
     margin: 0 auto;
-    top: 2em;
+    top: 2.5em;
   }
   .nav_list {
     justify-content: flex-end;
     flex-direction: row;
     font-weight: var(--fw-reg);
     font-size: var(--fs-body-small);
-    margin-right: 2em;
+    margin-right: 3em;
   }
 }
 .resize-animation-stopper * {

@@ -26,6 +26,7 @@
   --clr-light-highlight-two: #e7dafe;
   --clr-light-highlight-three: #7c33fa;
   --clr-light-highlight-four: #b9e42b;
+  /* --clr-project-category: #eef8cc; */
 
   --fs-h1: 3rem;
   --fs-h2: 1.75rem;
@@ -79,10 +80,10 @@ img {
   pointer-events: all;
   opacity: 1;
 }
-:focus {
+/* :focus {
   outline: 3px solid 'red';
   outline-offset: 3px;
-}
+} */
 
 /*Typography*/
 
@@ -110,13 +111,7 @@ section {
   max-width: 1100px;
   margin: auto;
 }
-/* section:not(:first-of-type) {
-  padding: 6em 2em 2em 2em;
-}
-section:last-of-type,
-#about {
-  padding: 6em 4em 6em 4em;
-} */
+
 .section_title {
   font-weight: var(--fw-reg);
   font-family: var(--ff-secondary);
@@ -125,7 +120,3 @@ section:last-of-type,
   text-align: center;
   margin-bottom: 0.75em;
 }
-/* .section_subtitle {
-  font-size: var(--fs-h3);
-  margin: 0;
-} */

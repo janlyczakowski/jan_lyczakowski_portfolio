@@ -19,6 +19,7 @@ footer {
 .footer_link {
   padding: 0.5em;
   color: inherit;
+  transition: opacity 0.25s ease-in-out;
 }
 
 .footer_link:hover {
