@@ -5,6 +5,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Layout from './Layout';
 import styles from '../css/MyProject.module.css';
 import '../css/index.css';
+import Carousel from './Carousel';
 
 function MyProject(props) {
   const { content } = props;
@@ -12,7 +13,7 @@ function MyProject(props) {
     title,
     subtitle,
     date,
-    srcImg,
+    images,
     altImg,
     description,
     technology,
@@ -20,7 +21,6 @@ function MyProject(props) {
     link_online,
     link_github,
   } = content;
-
   return (
     <Layout>
       <section className={`${styles.intro_portfolio_item}`}>
@@ -109,15 +109,8 @@ function MyProject(props) {
             })}
           </ul>
         </div>
-        {/* <p className={`${styles.section_intro_content} ${styles.tech_content}`}>
-          {technology}
-        </p> */}
-        <div className={styles.portofolio_picture_container}>
-          <img
-            src={srcImg}
-            className={`${styles.portfolio_picture}`}
-            alt={altImg}
-          />
+        <div className={styles.project_picture_container}>
+          <Carousel images={images} altImg={altImg} category={category} />
         </div>
       </section>
     </Layout>

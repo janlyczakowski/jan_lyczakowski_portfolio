@@ -122,20 +122,102 @@
   font-style: italic;
   font-weight: var(--fw-bold);
 }
-.portofolio_picture_container {
+.project_picture_container {
   width: 100%;
+  max-width: 500px;
   margin: 0 auto;
   position: relative;
 }
-.portfolio_picture {
-  object-fit: cover;
+.project_picture {
+  object-fit: contain;
+  object-position: center;
   box-shadow: var(--bs);
-  margin: 0 auto 3em auto;
+  margin: 0 auto 2em auto;
   border-radius: 10px;
-  max-width: 400px;
-  width: 100%;
+  width: auto;
   height: auto;
-  max-height: 400px;
+  max-height: 500px;
+}
+
+/* Carousel */
+
+.picture_container {
+  position: relative;
+}
+.arrow {
+  color: var(--clr-dark-color-text);
+  width: 10px;
+  height: 10px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.25s ease-in-out;
+}
+.arrow.software_development {
+  background-color: #d7ec9392;
+}
+.arrow.software_development:hover,
+.arrow.software_development.focus {
+  background-color: #d7ec93;
+}
+.arrow.static_maps {
+  background-color: #ddc9ff93;
+}
+.arrow.static_maps:hover,
+.arrow.static_maps.focus {
+  background-color: #ddc9ff;
+}
+.arrow:hover {
+  cursor: pointer;
+}
+.left,
+.right {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.left {
+  left: 0.5rem;
+}
+.right {
+  right: 0.5rem;
+}
+.indicator {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transition: background-color 0.25s ease-in-out;
+}
+.dot.software_development {
+  border: 1px solid #d7ec93;
+}
+.dot.software_development:hover,
+.dot.software_development.focus {
+  background-color: #d7ec93;
+}
+.dot.static_maps {
+  border: 1px solid #ddc9ff;
+}
+.dot.static_maps:hover,
+.dot.static_maps.focus {
+  background-color: #ddc9ff;
+}
+.dot:hover {
+  cursor: pointer;
+}
+.active {
+  scale: 1.5;
+}
+.active.software_development {
+  background-color: #d7ec93;
+}
+.active.static_maps {
+  background-color: #ddc9ff;
 }
 
 @media screen and (min-width: 300px) {
@@ -146,6 +228,10 @@
 @media screen and (min-width: 400px) {
   .project_title {
     font-size: 1.75rem;
+  }
+  .arrow {
+    width: 15px;
+    height: 15px;
   }
 }
 @media screen and (min-width: 500px) {
@@ -165,6 +251,17 @@
   .link_description {
     font-size: 0.9rem;
   }
+  .arrow {
+    width: 20px;
+    height: 20px;
+    padding: 0.5rem;
+  }
+  .left {
+    left: 1rem;
+  }
+  .right {
+    right: 1rem;
+  }
 }
 @media screen and (min-width: 600px) {
   .project_title {
@@ -182,9 +279,9 @@
       'title . img'
       'subtitle . img'
       'about . img'
-      'links . .'
-      'tech . .'
-      'tech_content tech_content .';
+      'links . img'
+      'tech . img'
+      'tech_content tech_content img';
   }
   .project_title {
     font-size: 2.5rem;
@@ -197,7 +294,7 @@
     grid-area: subtitle;
     justify-content: left;
   }
-  .portofolio_picture_container {
+  .project_picture_container {
     grid-area: img;
     max-width: 450px;
   }

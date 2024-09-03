@@ -1,14 +1,63 @@
-import crowdedSpaceImg from '../resources/img/crowded_space500x500.png';
-import corsicaImg from '../resources/img/corsica500x500.png';
-import corsicaMap from '../resources/img/corsica_map.pdf';
-import hogwartsImg from '../resources/img/hogwarts500x500.jpg';
-import datalabImg from '../resources/img/datalab500x500.png';
-import notebookImg from '../resources/img/notebook500x500.png';
 // import jazzClubImg from '../resources/img/seb500x500.png';
 // import earthquakesImg from '../resources/img/earthquake500x500.png';
 import glidersImg from '../resources/img/gliders500x500.png';
+import project_1_pic_1 from '../resources/img/portfolio_item_1/1.jpg';
+import project_1_pic_2 from '../resources/img/portfolio_item_1/2.jpg';
+import project_1_pic_3 from '../resources/img/portfolio_item_1/3.jpg';
+import project_1_pic_4 from '../resources/img/portfolio_item_1/4.jpg';
+
+import notebookImg from '../resources/img/notebook500x500.png';
+import project_3_pic_1 from '../resources/img/portfolio_item_3/1.png';
+import project_3_pic_2 from '../resources/img/portfolio_item_3/2.png';
+import project_3_pic_3 from '../resources/img/portfolio_item_3/3.png';
+import project_3_pic_4 from '../resources/img/portfolio_item_3/4.png';
+
+import datalabImg from '../resources/img/datalab900x900.png';
+import project_5_pic_1 from '../resources/img/portfolio_item_5/1.jpg';
+import project_5_pic_2 from '../resources/img/portfolio_item_5/2.jpg';
+import project_5_pic_3 from '../resources/img/portfolio_item_5/3.png';
+import project_5_pic_4 from '../resources/img/portfolio_item_5/4.jpg';
+import project_5_pic_5 from '../resources/img/portfolio_item_5/5.jpg';
+import project_5_pic_6 from '../resources/img/portfolio_item_5/6.jpg';
+
+import hogwartsImg from '../resources/img/hogwarts500x500.jpg';
+import project_6_pic_1 from '../resources/img/portfolio_item_6/1.jpg';
+import project_6_pic_2 from '../resources/img/portfolio_item_6/2.jpg';
+import project_6_pic_3 from '../resources/img/portfolio_item_6/3.jpg';
+import project_6_pic_4 from '../resources/img/portfolio_item_6/4.jpg';
+import project_6_pic_5 from '../resources/img/portfolio_item_6/5.jpg';
+import project_6_pic_6 from '../resources/img/portfolio_item_6/6.jpg';
+
+import corsicaImg from '../resources/img/corsica500x500.png';
+import corsicaMap from '../resources/img/corsica_map.pdf';
+import project_7_pic_1 from '../resources/img/portfolio_item_7/1.png';
+import project_7_pic_2 from '../resources/img/portfolio_item_7/2.png';
+import project_7_pic_3 from '../resources/img/portfolio_item_7/3.png';
+import project_7_pic_4 from '../resources/img/portfolio_item_7/4.png';
+
+import crowdedSpaceImg from '../resources/img/crowded_space500x500.png';
+import project_8_pic_1 from '../resources/img/portfolio_item_8/1.png';
+import project_8_pic_2 from '../resources/img/portfolio_item_8/2.png';
+import project_8_pic_3 from '../resources/img/portfolio_item_8/3.png';
+import project_8_pic_4 from '../resources/img/portfolio_item_8/4.png';
+import project_8_pic_5 from '../resources/img/portfolio_item_8/5.png';
+
 import mayorEnigmaImg from '../resources/img/mayor_enigma_icon.png';
+import project_9_pic_1 from '../resources/img/portfolio_item_9/1.jpg';
+import project_9_pic_2 from '../resources/img/portfolio_item_9/2.jpg';
+import project_9_pic_3 from '../resources/img/portfolio_item_9/3.jpg';
+import project_9_pic_4 from '../resources/img/portfolio_item_9/4.jpg';
+import project_9_pic_5 from '../resources/img/portfolio_item_9/5.jpg';
+import project_9_pic_6 from '../resources/img/portfolio_item_9/6.jpg';
+
 import contextAwarenessImg from '../resources/img/context_awareness500x500.png';
+import project_10_pic_1 from '../resources/img/portfolio_item_10/1.jpg';
+import project_10_pic_2 from '../resources/img/portfolio_item_10/2.jpg';
+import project_10_pic_3 from '../resources/img/portfolio_item_10/3.jpg';
+import project_10_pic_4 from '../resources/img/portfolio_item_10/4.jpg';
+import project_10_pic_5 from '../resources/img/portfolio_item_10/5.jpg';
+import project_10_pic_6 from '../resources/img/portfolio_item_10/6.jpg';
+import project_10_pic_7 from '../resources/img/portfolio_item_10/7.jpg';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -61,7 +110,7 @@ export const PORTFOLIO_ITEMS = [
     navigateTo: 'mywork/crowded_space',
     category: 'software development',
     dataAttribute: 'crowded_space',
-    srcImg: crowdedSpaceImg,
+    srcImg: project_8_pic_1,
     altImg: 'Crowded Space',
     title: 'Crowded Space',
     date: 'June 2023',
@@ -111,7 +160,7 @@ export const PORTFOLIO_ITEMS = [
     navigateTo: 'mywork/notebook',
     category: 'software development',
     dataAttribute: 'notebook',
-    srcImg: notebookImg,
+    srcImg: project_3_pic_1,
     altImg: 'An icon of the notebook app',
     title: 'Notebook',
     date: 'April 2021',
@@ -144,7 +193,15 @@ export const PORTFOLIO_PAGE_10 = {
   subtitle: "Master's thesis",
   category: 'software development',
   date: 'September 2024',
-  srcImg: contextAwarenessImg,
+  images: [
+    project_10_pic_1,
+    project_10_pic_2,
+    project_10_pic_3,
+    project_10_pic_4,
+    project_10_pic_5,
+    project_10_pic_6,
+    project_10_pic_7,
+  ],
   altImg: 'A picture of an adaptive mobile map',
   description: [
     "This research project aimed to address the challenges faced by mobile map users in dynamic environments by developing and evaluating a context-aware mobile map prototype. The goal was to create a map that adapts the amount and type of information displayed based on the user's specific needs in a particular situation and to test the impact of noise level and movement speed on mobile map reading performance. To investigate the impact of contextual factors and assess the effectiveness of the adaptive map, a field-based user evaluation was conducted where participants had to solve map-related tasks in various scenarios, including walking in a park, catching public transport, and sightseeing in a city center. These scenarios exposed users to different levels of movement speed and noise.",
@@ -172,7 +229,15 @@ export const PORTFOLIO_PAGE_9 = {
   subtitle: 'Mobile app',
   category: 'software development',
   date: 'January 2024',
-  srcImg: mayorEnigmaImg,
+  images: [
+    mayorEnigmaImg,
+    project_9_pic_1,
+    project_9_pic_2,
+    project_9_pic_3,
+    project_9_pic_4,
+    project_9_pic_5,
+    project_9_pic_6,
+  ],
   altImg: `The icon of Mayor's Enigma mobile app`,
   description: [
     'This project was developed as a part of the Mobile Cartography class at the Technical University of Dresden. It is a mobile game that combines location-based services, storytelling, and interactive elements to create a compelling detective experience. The game involves following a series of locations to gather evidence and ultimately solve the case. This project showcases my skills in mobile development, cartography, and database management, demonstrating my ability to apply these concepts to create an engaging and interactive experience.',
@@ -199,7 +264,13 @@ export const PORTFOLIO_PAGE_8 = {
   subtitle: 'Interactive map',
   category: 'software development',
   date: 'June 2023',
-  srcImg: crowdedSpaceImg,
+  images: [
+    project_8_pic_1,
+    project_8_pic_2,
+    project_8_pic_3,
+    project_8_pic_4,
+    project_8_pic_5,
+  ],
   altImg: 'Crowded Space',
   description: [
     'The project was done for the module of Digital Map Creation for the summer semester of 2023 at the Technical University of Vienna as part of the Cartography M.Sc. The interactive 3D web-based visualization aims to increase awareness about the growing number of satellites and debris around the Earth.',
@@ -224,7 +295,13 @@ export const PORTFOLIO_PAGE_7 = {
   subtitle: 'Static Map',
   category: 'static maps',
   date: 'June 2023',
-  srcImg: corsicaImg,
+  images: [
+    corsicaImg,
+    project_7_pic_1,
+    project_7_pic_2,
+    project_7_pic_3,
+    project_7_pic_4,
+  ],
   altImg: 'Corsica: Into the Unknown',
   description: [
     'This project, completed as part of the "Project Map Creation" course at the Technical University of Vienna, aimed to explore the power of storytelling through maps by creating a personalized, printable map of Corsica. Based on my one-week hiking experience on the island, the map incorporates my unique perspective and highlights the areas I explored.',
@@ -245,7 +322,14 @@ export const PORTFOLIO_PAGE_6 = {
   subtitle: 'Interactive map',
   category: 'software development',
   date: 'February 2023',
-  srcImg: hogwartsImg,
+  images: [
+    project_6_pic_1,
+    project_6_pic_2,
+    project_6_pic_3,
+    project_6_pic_4,
+    project_6_pic_5,
+    project_6_pic_6,
+  ],
   altImg: 'Icon of hogwarts',
   description: [
     "This project, undertaken during my first semester of the Cartography Master's program in Munich, aimed to explore the potential of fantasy mapping to raise awareness about accessibility issues in schools. By creating a web application focused on Hogwarts, a universally recognizable fictional school, the goal was to demonstrate the barriers that children with mobility disabilities face in accessing educational facilities.",
@@ -270,7 +354,15 @@ export const PORTFOLIO_PAGE_5 = {
   subtitle: 'Interactive Dashboard',
   category: 'software development',
   date: 'May 2022',
-  srcImg: datalabImg,
+  images: [
+    datalabImg,
+    project_5_pic_1,
+    project_5_pic_2,
+    project_5_pic_3,
+    project_5_pic_4,
+    project_5_pic_5,
+    project_5_pic_6,
+  ],
   altImg: 'Datalab - SDG Monitoring Dashboard',
   description: [
     'As a Front-End Web Developer at Colouree, I was solely responsible for designing and developing the entire UI/UX of this project, an interactive web-based dashboard built in React. Datalab is designed to analyze and monitor Sustainable Development Goals (SDGs) indicators related to the Sustainable Metropolitan Agenda.',
@@ -307,7 +399,7 @@ export const PORTFOLIO_PAGE_3 = {
   subtitle: 'Web App',
   category: 'software development',
   date: 'April 2021',
-  srcImg: notebookImg,
+  images: [project_3_pic_1, project_3_pic_2, project_3_pic_3, project_3_pic_4],
   altImg: 'Notebook application',
   description: [
     'This project aimed to develop a functional and user-friendly note-taking application inspired by Google Keep. A key focus of the project was to hone my skills in JavaScript, HTML, and CSS while creating a practical and useful application. The application allows users to create, edit, and manage their daily notes efficiently. Users can easily create new notes with rich text formatting and edit existing notes to modify their content. Notes are stored persistently using localStorage, allowing for easy access and retrieval. Users can delete notes individually, and the application displays a placeholder message when there are no notes. Notes are displayed in a list format, and each note can be assigned a color for visual organization. The development process focused on replicating the core functionality and user experience of Google Keep, including note creation, editing, and management.',
@@ -339,7 +431,13 @@ export const PORTFOLIO_PAGE_1 = {
   subtitle: "Bachelor's thesis",
   category: 'software development',
   date: 'February 2021',
-  srcImg: glidersImg,
+  images: [
+    glidersImg,
+    project_1_pic_1,
+    project_1_pic_2,
+    project_1_pic_3,
+    project_1_pic_4,
+  ],
   altImg: "Glider's dynamic visualization",
   description: [
     "This thesis project explored the potential of Luciad software to visualize dynamic geospatial data, specifically glider flight paths from a single tournament. By developing a custom 3D visualization within the IntelliJ IDEA development environment, the project aimed to provide a novel and informative way to analyze glider performance and flight patterns. Utilizing Luciad's geospatial capabilities and Java programming language, the visualization effectively represented the flight paths of multiple gliders simultaneously, allowing for in-depth analysis and insights.",
