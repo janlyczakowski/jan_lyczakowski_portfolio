@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import Layout from '../components/Layout';
-import picture_me from '../resources/img/Me_low_resolution.jpg';
+// import picture_me from '../resources/img/Me_low_resolution.jpg';
 import styles from '../css/AboutMe.module.css';
 import '../css/index.css';
 
@@ -105,11 +105,11 @@ function AboutMe() {
             maker and piano player.
           </p>
         </div>
-        <img
+        {/* <img
           src={picture_me}
           className={styles.intro_picture}
           alt=" Jan Łyczakowski smiling in Polignano a Mare"
-        />
+        /> */}
       </section>
       <section className={styles.map_container}>
         <div id={styles['my_map']} ref={mapRef}>

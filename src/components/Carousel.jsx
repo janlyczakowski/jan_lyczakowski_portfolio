@@ -7,6 +7,7 @@ import {
 import styles from '../css/MyProject.module.css';
 
 function Carousel(props) {
+  console.log('carousel rendered');
   const { altImg, images, category } = props;
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -23,12 +24,13 @@ function Carousel(props) {
   const handleDotClick = (index) => {
     setCurrentIndex(index);
   };
+
   return (
     <div className={styles.carousel}>
       <div className={styles.picture_container}>
         <img
           src={images[currentIndex]}
-          key={currentIndex}
+          // key={currentIndex}
           className={styles.project_picture}
           alt={altImg}
         />

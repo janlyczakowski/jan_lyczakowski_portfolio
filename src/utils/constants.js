@@ -6,7 +6,6 @@ import project_1_pic_2 from '../resources/img/portfolio_item_1/2.jpg';
 import project_1_pic_3 from '../resources/img/portfolio_item_1/3.jpg';
 import project_1_pic_4 from '../resources/img/portfolio_item_1/4.jpg';
 
-import notebookImg from '../resources/img/notebook500x500.png';
 import project_3_pic_1 from '../resources/img/portfolio_item_3/1.png';
 import project_3_pic_2 from '../resources/img/portfolio_item_3/2.png';
 import project_3_pic_3 from '../resources/img/portfolio_item_3/3.png';
@@ -35,7 +34,6 @@ import project_7_pic_2 from '../resources/img/portfolio_item_7/2.png';
 import project_7_pic_3 from '../resources/img/portfolio_item_7/3.png';
 import project_7_pic_4 from '../resources/img/portfolio_item_7/4.png';
 
-import crowdedSpaceImg from '../resources/img/crowded_space500x500.png';
 import project_8_pic_1 from '../resources/img/portfolio_item_8/1.png';
 import project_8_pic_2 from '../resources/img/portfolio_item_8/2.png';
 import project_8_pic_3 from '../resources/img/portfolio_item_8/3.png';

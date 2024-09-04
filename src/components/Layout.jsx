@@ -7,15 +7,15 @@ import '../css/index.css';
 
 function Layout(props) {
   const { children } = props;
-  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [isMobileNavOpen, isSetMobileNavOpen] = useState(false);
 
-  const contentStyle = mobileNavOpen ? 'inactive' : 'active';
+  const contentStyle = isMobileNavOpen ? 'inactive' : 'active';
 
   return (
     <>
       <Navigation
-        mobileNavOpen={mobileNavOpen}
-        setMobileNavOpen={setMobileNavOpen}
+        isMobileNavOpen={isMobileNavOpen}
+        setIsMobileNavOpen={isSetMobileNavOpen}
       />
       <div className={contentStyle}>{children}</div>
       <Footer />

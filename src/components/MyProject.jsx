@@ -8,6 +8,7 @@ import '../css/index.css';
 import Carousel from './Carousel';
 
 function MyProject(props) {
+  console.log('my project rendered');
   const { content } = props;
   const {
     title,
@@ -21,6 +22,7 @@ function MyProject(props) {
     link_online,
     link_github,
   } = content;
+
   return (
     <Layout>
       <section className={`${styles.intro_portfolio_item}`}>

@@ -138,6 +138,12 @@
   height: auto;
   max-height: 500px;
 }
+.project_picture_inactive {
+  display: none;
+}
+.picture_placeholder {
+  box-shadow: none;
+}
 
 /* Carousel */
 
@@ -175,6 +181,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  /* display: none; */
 }
 .left {
   left: 0.5rem;
@@ -186,6 +193,9 @@
   display: flex;
   justify-content: center;
   gap: 0.75rem;
+}
+.inactive {
+  opacity: 0;
 }
 .dot {
   width: 10px;

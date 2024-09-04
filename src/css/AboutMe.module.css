@@ -27,7 +27,7 @@
 }
 #my_map {
   position: relative;
-  background-image: url('../resources/img/Mymap1.png');
+  /* background-image: url('../resources/img/Mymap1.png'); */
   background-color: black;
   background-size: 100% 100%;
   max-width: 800px;
@@ -47,7 +47,7 @@
   height: 12px;
   transform: translate(-1px, -1px);
 }
-#my_map .home_marker {
+/* #my_map .home_marker {
   background-image: url('../resources/img/home.svg');
 }
 #my_map .work_marker {
@@ -55,7 +55,7 @@
 }
 #my_map .university_marker {
   background-image: url('../resources/img/university.svg');
-}
+} */
 #braniewo {
   top: 2.5%;
   left: 61.5%;
