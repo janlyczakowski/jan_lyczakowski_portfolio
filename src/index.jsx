@@ -5,7 +5,6 @@ import { createHashRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home';
 import AboutMe from './pages/AboutMe';
 import MyProject from './components/MyProject';
-import Map from './pages/Map';
 import {
   PORTFOLIO_PAGE_10,
   PORTFOLIO_PAGE_9,
@@ -28,10 +27,6 @@ const router = createHashRouter([
   {
     path: 'about_me',
     element: <AboutMe />,
-  },
-  {
-    path: 'map',
-    element: <Map />,
   },
   {
     path: 'mywork/context_awareness',
