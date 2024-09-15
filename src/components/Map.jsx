@@ -72,7 +72,7 @@ function Map() {
       //     shape.properties.name === 'Belgium'
       // )
       .map((shape) => {
-        console.log(shape.properties.name);
+        // console.log(shape.properties.name);
         return (
           <path
             key={shape.id}

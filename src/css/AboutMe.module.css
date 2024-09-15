@@ -23,8 +23,6 @@
 .svg_container {
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  /* max-width: 800px; */
   margin: auto;
   position: relative;
 }
@@ -34,26 +32,134 @@
 .slider_container {
   width: 100%;
   height: 20vh;
-  /* background-color: brown; */
-  display: block;
+  color: var(--clr-background-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 1rem;
 }
-.slider_text {
-  color: black;
+.active_city {
+  margin: auto;
+  font-size: 1.5rem;
+  font-weight: var(--fw-extra-bold);
+  font-family: var(--ff-secondary);
+}
+.timeline_container {
+  display: none;
+  height: 100%;
+}
+.mask {
+  height: 290px;
+  overflow: hidden;
+}
+.timeline_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.5s ease-in-out;
 }
 
+.timeline_item {
+  margin-right: 1em;
+  font-size: 1rem;
+}
+.timeline_item .active_item {
+  font-size: 1.9rem;
+  font-weight: var(--fw-extra-bold);
+  opacity: 1 !important;
+}
+
+.timeline_item_name {
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  opacity: 0.3;
+  transition: opacity 250ms ease-in;
+}
+
+.timeline_item_name:hover,
+.timeline_item_name:focus {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.year_counter {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  margin: 0;
+  font-size: 1.5rem;
+  max-width: 100px;
+  font-weight: var(--fw-extra-bold);
+  font-family: var(--ff-secondary);
+  color: var(--clr-dark-color-text);
+}
+.slider_icon {
+  font-size: 1rem;
+  color: var(--clr-background-dark);
+}
+
+@media screen and (min-width: 270px) {
+  .year_counter {
+    max-width: 150px;
+  }
+}
+@media screen and (min-width: 300px) {
+  .slider_container {
+    padding: 2rem 1rem;
+  }
+}
+@media screen and (min-width: 400px) {
+  .year_counter,
+  .active_city {
+    font-size: 1.75rem;
+  }
+}
 @media screen and (min-width: 800px) {
+  .year_counter {
+    position: initial;
+    font-size: 1.9rem;
+    max-width: 100%;
+    margin: 5rem 0 2rem 0;
+  }
   .loading_text {
     font-size: 2rem;
-    /* max-width: 400px; */
   }
   .page_container {
     flex-direction: row;
   }
   .slider_container {
     height: 100vh;
-    width: 30vw;
+    width: 40vw;
+    justify-content: center;
+    margin-left: 3rem;
   }
+
   .map_container {
     height: 100vh;
+  }
+  .timeline_container {
+    display: flex;
+    align-items: center;
+  }
+  .active_city {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .timeline_item {
+    font-size: 1.1rem;
+  }
+  .year_counter,
+  .timeline_item .active_item {
+    font-size: 2.5rem;
+  }
+
+  .slider_container {
+    width: 30vw;
+    margin-left: 0;
+  }
+  .mask {
+    height: 327px;
   }
 }
