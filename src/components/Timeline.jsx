@@ -22,9 +22,6 @@ function Timeline(props) {
       const activeItem = listRef.current.children[activeIndex];
       const targetItem = listRef.current.children[targetIndex];
 
-      console.log(activeItem);
-      console.log(targetItem);
-
       const activeItemHeight = activeItem.clientHeight;
       const targetItemHeight = targetItem.clientHeight;
 
@@ -32,7 +29,6 @@ function Timeline(props) {
       const finalOffset =
         (activeItemHeight / 2 - targetItemHeight / 2 + targetItemHeight) *
         itemsToSkip;
-      console.log(finalOffset);
       if (activeCity.id < city.id) {
         setOffset((prev) => prev - finalOffset);
       } else {
@@ -46,10 +42,6 @@ function Timeline(props) {
     if (activeCity && listRef.current) {
       listRef.current.style.transform = `translateY(${offset}px)`;
     }
-    // if (pc_screen) {
-    //   console.log('media query applied');
-    //   setOffset(92); //2 times single offset
-    // }
   }, [activeCity, cities]);
 
   return (

@@ -1,8 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 import DataFetcher from '../utils/DataFetcher';
 import styles from '../css/AboutMe.module.css';
 import { pointsData } from '../utils/cities';
+import AnimatedMarker from './AnimatedMarker';
+import AnimatedPath from './AnimatedPath';
+import AnimatedPopup from './AnimatedPopup';
 
 function combineGeoJSON(geojson1, geojson2) {
   return {
@@ -25,7 +28,21 @@ function Map(props) {
     height: 0,
   });
   const [markerSize, setMarkerSize] = useState(1);
-  // const visitedCountries = ['Poland', 'Germany', 'Italy', 'Austria', 'Belgium'];
+  const markerRef = useRef(null);
+  const svgRef = useRef(null);
+  const activePathRef = useRef(null);
+  const popupRef = useRef(null);
+  const [markerPosition, setMarkerPosition] = useState({ top: 0, left: 0 });
+  const [popupPosition, setPopupPosition] = useState({
+    vertical: 'below',
+    horizontal: 'left',
+  });
+  const [popupMode, setPopupMode] = useState('mobile');
+  const [popupMargin, setPopupMargin] = useState({
+    markerAbove: 0,
+    markerBelow: 0,
+  }); // State to store the height of the active path
+
   // set up scale, centere of the map and projection
   const projection = d3.geoConicEqualArea().scale(mapScale).center(mapCenter);
 
@@ -42,31 +59,37 @@ function Map(props) {
       //   setMarkerSize(1);
       // } else
       if (window.innerWidth >= 800) {
+        setPopupMode('pc');
         setMapScale(2000);
         setMapCenter([17, 50]);
         setMaskSettings({ x: '0%', y: '0%', width: '100%', height: '100%' });
         setMarkerSize(1.25);
       } else if (window.innerWidth >= 550) {
+        setPopupMode('pc');
         setMapScale(2000);
         setMapCenter([17, 50]);
         setMaskSettings({ x: '0%', y: '-25%', width: '100%', height: '150%' });
         setMarkerSize(1.25);
       } else if (window.innerWidth >= 500) {
+        setPopupMode('pc');
         setMapScale(2200);
         setMapCenter([17, 50]);
         setMaskSettings({ x: '0%', y: '-25%', width: '100%', height: '150%' });
         setMarkerSize(1.5);
       } else if (window.innerWidth >= 450) {
+        setPopupMode('mobile');
         setMapScale(2400);
         setMapCenter([16, 49]);
         setMaskSettings({ x: '0%', y: '-25%', width: '100%', height: '150%' });
         setMarkerSize(1.5);
       } else if (window.innerWidth >= 390) {
+        setPopupMode('mobile');
         setMapScale(2700);
         setMapCenter([16, 49]);
         setMaskSettings({ x: '0%', y: '-25%', width: '100%', height: '150%' });
         setMarkerSize(1.75);
       } else {
+        setPopupMode('mobile');
         setMapScale(3000);
         setMapCenter([16, 49]);
         setMaskSettings({ x: '0%', y: '-25%', width: '100%', height: '150%' });
@@ -82,48 +105,67 @@ function Map(props) {
     };
   }, []);
 
+  useEffect(() => {
+    if (markerRef.current && svgRef.current) {
+      const markerRect = markerRef.current.getBoundingClientRect();
+      const svgRect = svgRef.current.getBoundingClientRect();
+
+      // Calculate the relative position of the marker within the SVG
+      const relativeTop = markerRect.top - svgRect.top;
+      const relativeLeft = markerRect.left - svgRect.left;
+
+      setMarkerPosition({ top: relativeTop, left: relativeLeft });
+
+      // Determine whether to place the popup above or below the marker
+      if (relativeTop < svgRect.height / 2) {
+        if (relativeLeft < svgRect.width / 2) {
+          setPopupPosition({ vertical: 'below', horizontal: 'right' });
+        } else {
+          setPopupPosition({ vertical: 'below', horizontal: 'left' });
+        }
+      } else {
+        if (relativeLeft < svgRect.width / 2) {
+          setPopupPosition({ vertical: 'above', horizontal: 'right' });
+        } else {
+          setPopupPosition({ vertical: 'above', horizontal: 'left' });
+        }
+      }
+
+      // Get the height of the active path
+      if (activePathRef.current && popupRef.current) {
+        const bboxPath = activePathRef.current.getBoundingClientRect();
+        const bboxPopup = popupRef.current.getBoundingClientRect();
+
+        const lowermostPosition = bboxPath.height + bboxPath.y + 30;
+        const uppermostPosition = bboxPath.y - bboxPopup.height - 30;
+        setPopupMargin({
+          markerAbove: lowermostPosition,
+          markerBelow: uppermostPosition,
+        });
+      }
+    }
+  }, [activeCity, data]);
+
   if (data) {
     // combine layer of countries with custom layer of points
     const mergedData = combineGeoJSON(data, pointsData);
 
-    // Render all coutnries except the active country
+    // Render all coutries
     boundaries = mergedData.features
       .filter(
         (shape) =>
-          (shape.geometry.type === 'Polygon' ||
-            shape.geometry.type === 'MultiPolygon') &&
-          shape.properties.name !== activeCity.country
-        // shape.properties.name === 'Poland' ||
-        // shape.properties.name === 'Germany' ||
-        // shape.properties.name === 'Italy' ||
-        // shape.properties.name === 'Austria' ||
-        // shape.properties.name === 'Belgium'
+          shape.geometry.type === 'Polygon' ||
+          shape.geometry.type === 'MultiPolygon'
       )
       .map((shape) => {
-        // console.log(shape.properties.name);
-        console.log(activeCity);
-        console.log(shape.properties.name);
         return (
           <path
             key={shape.id}
             d={geoPathGenerator(shape)}
-            stroke={
-              activeCity.country === shape.properties.name
-                ? '#174538'
-                : '#d7d7d7'
-            }
+            stroke={'#d7d7d7'}
             strokeWidth={1}
-            // fill={
-            //   activeCity.country === shape.properties.name ? '#174538' : 'none'
-            // }
             fill={'none'}
             fillOpacity={0.1}
-            // onMouseEnter={(e) => {
-            //   d3.select(e.target).style('fill', 'red');
-            // }}
-            // onMouseLeave={(e) => {
-            //   d3.select(e.target).style('fill', 'none');
-            // }}
           />
         );
       });
@@ -138,14 +180,12 @@ function Map(props) {
       )
       .map((shape) => {
         return (
-          <path
+          <AnimatedPath
             key={shape.id}
-            d={geoPathGenerator(shape)}
-            stroke={'#174538'}
-            strokeWidth={2}
-            fill={'#174538'}
-            fillOpacity={0.1}
-            // filter="url(#dro p-shadow-country)"
+            shape={shape}
+            geoPathGenerator={geoPathGenerator}
+            activeCity={activeCity}
+            activePathRef={activePathRef}
           />
         );
       });
@@ -154,35 +194,45 @@ function Map(props) {
     points = mergedData.features
       .filter((shape) => shape.geometry.type === 'Point')
       .map((shape) => {
-        console.log(shape);
         const [x, y] = projection(shape.geometry.coordinates);
         return (
-          <path
-            d="M20.6211 8.45C19.5711 3.83 15.5411 1.75 12.0011 1.75C12.0011 1.75 12.0011 1.75 11.9911 1.75C8.46107 1.75 4.42107 3.82 3.37107 8.44C2.20107 13.6 5.36107 17.97 8.22107 20.72C9.28107 21.74 10.6411 22.25 12.0011 22.25C13.3611 22.25 14.7211 21.74 15.7711 20.72C18.6311 17.97 21.7911 13.61 20.6211 8.45ZM12.0011 13.46C10.2611 13.46 8.85107 12.05 8.85107 10.31C8.85107 8.57 10.2611 7.16 12.0011 7.16C13.7411 7.16 15.1511 8.57 15.1511 10.31C15.1511 12.05 13.7411 13.46 12.0011 13.46Z"
-            // fill="rgb(189, 237, 31)"
-            fill={
-              activeCity.name === shape.properties.city ? '#174538' : 'none'
-            }
-            className={styles.markers}
-            transform={`translate(${x - 15 * markerSize}, ${
-              y - 20 * markerSize
-            }) scale(${markerSize})`} // Adjust the translation to center the path
-            filter="url(#drop-shadow-point)"
+          <AnimatedMarker
+            key={shape.id}
+            x={x}
+            y={y}
+            markerSize={markerSize}
+            shape={shape}
+            activeCity={activeCity}
+            cities={cities}
+            markerRef={markerRef}
           />
-
-          // <circle
-          //   key={shape.id}
-          //   cx={x}
-          //   cy={y}
-          //   r={6}
-          //   fill={
-          //     activeCity.name === shape.properties.city ? '#7c33fa' : 'none'
-          //   }
-          //   filter="url(#drop-shadow)"
-          // />
         );
       });
   }
+
+  // const popupStyles = {
+  //   visibility:
+  //     markerPosition.top === 0 && markerPosition.left === 0
+  //       ? 'hidden'
+  //       : 'visible',
+
+  //   ...(popupMode === 'mobile' && {
+  //     bottom: popupPosition.vertical === 'below' ? '20px' : 'auto',
+  //     top: popupPosition.vertical === 'above' ? '95px' : 'auto',
+  //     left: '50%',
+  //     // transform: `translateX(50%)`,
+  //   }),
+  //   ...(popupMode === 'pc' && {
+  //     top:
+  //       popupPosition.vertical === 'below'
+  //         ? `${popupMargin.markerAbove}px`
+  //         : `${popupMargin.markerBelow}px`,
+  //     left: `${markerPosition.left}px`,
+  //     transform: `translateX(${
+  //       popupPosition.horizontal === 'left' ? '-100%' : '0'
+  //     })`,
+  //   }),
+  // };
   return (
     <div className={styles.map_container}>
       {loading ? (
@@ -198,6 +248,7 @@ function Map(props) {
             height={'100%'}
             viewBox="0 0 800 800"
             preserveAspectRatio="xMidYMid meet"
+            ref={svgRef}
           >
             <defs>
               <filter id="filter">
@@ -248,6 +299,16 @@ function Map(props) {
               {boundaries} {activeCountryBoundary} {points}
             </g>
           </svg>
+          <AnimatedPopup
+            activeCity={activeCity}
+            cities={cities}
+            popupRef={popupRef}
+            // popupStyles={popupStyles}
+            markerPosition={markerPosition}
+            popupMode={popupMode}
+            popupPosition={popupPosition}
+            popupMargin={popupMargin}
+          />
         </div>
       )}
     </div>

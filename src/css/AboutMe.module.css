@@ -98,6 +98,24 @@
   font-size: 1rem;
   color: var(--clr-background-dark);
 }
+
+.popup {
+  position: absolute;
+  background-color: var(--clr-background-light);
+  border-radius: 5px;
+  padding: 1rem;
+  width: 80%;
+  max-width: 250px;
+  height: auto;
+  transform: translateX(-50%);
+  border: 2px solid #174538;
+}
+.popup_text {
+  color: var(--clr-dark-color-text);
+  margin: 0;
+  font-size: 0.65rem;
+  font-weight: var(--fw-extra-bold);
+}
 @media screen and (min-width: 270px) {
   .year_counter {
     max-width: 150px;
@@ -115,6 +133,9 @@
   }
   .year_counter {
     max-width: 100%;
+  }
+  .popup_text {
+    font-size: 0.75rem;
   }
 }
 @media screen and (min-width: 800px) {
@@ -164,5 +185,8 @@
   }
   .mask {
     height: 327px;
+  }
+  .popup_text {
+    font-size: 0.9rem;
   }
 }
