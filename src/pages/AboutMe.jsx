@@ -100,7 +100,7 @@ function AboutMe() {
   return (
     <Layout>
       <div className={styles.page_container}>
-        <Map />
+        <Map activeCity={activeCity} cities={cities} />
         <Timeline
           cities={cities}
           setActiveCity={setActiveCity}
