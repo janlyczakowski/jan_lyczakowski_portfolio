@@ -229,7 +229,7 @@ function Map(props) {
           >
             <defs>
               <filter id="filter">
-                <feGaussianBlur stdDeviation="100" />
+                <feGaussianBlur stdDeviation="50" />
               </filter>
               <mask id="mask">
                 <rect
@@ -253,21 +253,6 @@ function Map(props) {
                   dy="6"
                   stdDeviation="3"
                   floodColor="rgb(95, 95, 95)"
-                  floodOpacity="0.5"
-                />
-              </filter>
-              <filter
-                id="drop-shadow-country"
-                x="-50%"
-                y="-50%"
-                width="200%"
-                height="200%"
-              >
-                <feDropShadow
-                  dx="0"
-                  dy="0"
-                  stdDeviation="4"
-                  floodColor="#000000"
                   floodOpacity="0.5"
                 />
               </filter>

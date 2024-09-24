@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import styles from '../css/AboutMe.module.css';
 import { animated, useSpring } from '@react-spring/web';
-import { transform } from 'framer-motion';
 
 function AnimatedPopup(props) {
   const {

@@ -365,7 +365,7 @@ export const PORTFOLIO_PAGE_5 = {
   description: [
     'As a Front-End Web Developer at Colouree, I was solely responsible for designing and developing the entire UI/UX of this project, an interactive web-based dashboard built in React. Datalab is designed to analyze and monitor Sustainable Development Goals (SDGs) indicators related to the Sustainable Metropolitan Agenda.',
     'Datalab offers a comprehensive visualization platform, featuring maps created using Leaflet to represent geospatial SDG data, as well as graphs and tables for more traditional data analysis. This combination of visualizations allows users to explore data from various perspectives and gain deeper insights into SDG progress. It enables stakeholders to identify areas where the city is on track and where improvements are needed to ensure sustainable development.',
-    'Collaborating closely with the back-end developer, I had to ensure seamless data integration between the front end and back end. This experience provided valuable hands-on practice and deepened my understanding of full-stack development. The dashboard is fully responsive, hence it adapts to various screen sizes, providing a consistent and optimal user experience on desktops, tablets, and smartphones.',
+    'Collaborating closely with the back-end developer, I had to ensure seamless data integration between the frontend and backend. This experience provided valuable hands-on practice and deepened my understanding of full-stack development. The dashboard is fully responsive, hence it adapts to various screen sizes, providing a consistent and optimal user experience on desktops, tablets, and smartphones.',
   ],
   technology: [
     { text: 'HTML', icon: <FontAwesomeIcon icon={faHtml5} /> },

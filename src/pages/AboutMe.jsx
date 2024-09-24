@@ -23,7 +23,7 @@ const cities = [
     name: 'Warsaw',
     country: 'Poland',
     time: '2017 - 2021',
-    text: "After high school, I went to the Warsaw University of Technology to study Geodesy and Cartography. That's when I really fell in love with maps and spatial data.",
+    text: "After high school, I went to the Warsaw University of Technology to study Geodesy and Cartography. That's when I became fascinated by maps and geospatial data.",
   },
   {
     value: 25,
@@ -31,7 +31,7 @@ const cities = [
     name: 'Bari',
     country: 'Italy',
     time: '2020',
-    text: "During my university studies, I participated in the Eramus+ program for five months. It was a life-changing experience for me. I learned a lot and it was there that I decided I wanted to study abroad in the future and do my Master's in cartography",
+    text: "During my university studies, I participated in the Eramus+ program for five months. It was a life-changing experience for me. I learned a lot and it was there that I decided I wanted to study abroad in the future and do my Master's in Cartography.",
   },
   {
     value: 37,
@@ -39,7 +39,7 @@ const cities = [
     name: 'Genoa',
     country: 'Italy',
     time: '2021/2022',
-    text: 'After graduation in 2021, I did 7 months internship learning the web development and web-based GIS applications. I liked it so much that I stayed there for another six months to work as a Frontend developer.',
+    text: 'After graduation in 2021, I did 7 months internship learning the web development and web-based GIS applications. I liked it so much that I stayed there for another six months to work as a front-end developer.',
   },
   {
     value: 50,
