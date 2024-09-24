@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/jan_lyczakowski_portfolio/static/css/main.1304afdd.css",
-    "main.js": "/jan_lyczakowski_portfolio/static/js/main.32d7bb9c.js",
+    "main.js": "/jan_lyczakowski_portfolio/static/js/main.0f163a20.js",
     "static/media/corsica_map.pdf": "/jan_lyczakowski_portfolio/static/media/corsica_map.e131873cad20d19f633b.pdf",
     "static/media/1.png": "/jan_lyczakowski_portfolio/static/media/1.5e8cd20939b4e56bb13c.png",
     "static/media/1_8k.jpg": "/jan_lyczakowski_portfolio/static/media/1_8k.060da32112c15907107b.jpg",
@@ -26,10 +26,10 @@
     "static/media/mayor_enigma_icon.png": "/jan_lyczakowski_portfolio/static/media/mayor_enigma_icon.ebedd32809a1bfa14f66.png",
     "index.html": "/jan_lyczakowski_portfolio/index.html",
     "main.1304afdd.css.map": "/jan_lyczakowski_portfolio/static/css/main.1304afdd.css.map",
-    "main.32d7bb9c.js.map": "/jan_lyczakowski_portfolio/static/js/main.32d7bb9c.js.map"
+    "main.0f163a20.js.map": "/jan_lyczakowski_portfolio/static/js/main.0f163a20.js.map"
   },
   "entrypoints": [
     "static/css/main.1304afdd.css",
-    "static/js/main.32d7bb9c.js"
+    "static/js/main.0f163a20.js"
   ]
 }
