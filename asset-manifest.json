@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/jan_lyczakowski_portfolio/static/css/main.ae90c2f4.css",
-    "main.js": "/jan_lyczakowski_portfolio/static/js/main.1e766ce1.js",
+    "main.css": "/jan_lyczakowski_portfolio/static/css/main.1304afdd.css",
+    "main.js": "/jan_lyczakowski_portfolio/static/js/main.13fd9d3d.js",
     "static/media/corsica_map.pdf": "/jan_lyczakowski_portfolio/static/media/corsica_map.e131873cad20d19f633b.pdf",
     "static/media/1.png": "/jan_lyczakowski_portfolio/static/media/1.5e8cd20939b4e56bb13c.png",
     "static/media/1_8k.jpg": "/jan_lyczakowski_portfolio/static/media/1_8k.060da32112c15907107b.jpg",
@@ -25,11 +25,11 @@
     "static/media/hogwarts500x500.jpg": "/jan_lyczakowski_portfolio/static/media/hogwarts500x500.59f4c76402009c198b1c.jpg",
     "static/media/mayor_enigma_icon.png": "/jan_lyczakowski_portfolio/static/media/mayor_enigma_icon.ebedd32809a1bfa14f66.png",
     "index.html": "/jan_lyczakowski_portfolio/index.html",
-    "main.ae90c2f4.css.map": "/jan_lyczakowski_portfolio/static/css/main.ae90c2f4.css.map",
-    "main.1e766ce1.js.map": "/jan_lyczakowski_portfolio/static/js/main.1e766ce1.js.map"
+    "main.1304afdd.css.map": "/jan_lyczakowski_portfolio/static/css/main.1304afdd.css.map",
+    "main.13fd9d3d.js.map": "/jan_lyczakowski_portfolio/static/js/main.13fd9d3d.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae90c2f4.css",
-    "static/js/main.1e766ce1.js"
+    "static/css/main.1304afdd.css",
+    "static/js/main.13fd9d3d.js"
   ]
 }
