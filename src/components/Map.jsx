@@ -210,29 +210,6 @@ function Map(props) {
       });
   }
 
-  // const popupStyles = {
-  //   visibility:
-  //     markerPosition.top === 0 && markerPosition.left === 0
-  //       ? 'hidden'
-  //       : 'visible',
-
-  //   ...(popupMode === 'mobile' && {
-  //     bottom: popupPosition.vertical === 'below' ? '20px' : 'auto',
-  //     top: popupPosition.vertical === 'above' ? '95px' : 'auto',
-  //     left: '50%',
-  //     // transform: `translateX(50%)`,
-  //   }),
-  //   ...(popupMode === 'pc' && {
-  //     top:
-  //       popupPosition.vertical === 'below'
-  //         ? `${popupMargin.markerAbove}px`
-  //         : `${popupMargin.markerBelow}px`,
-  //     left: `${markerPosition.left}px`,
-  //     transform: `translateX(${
-  //       popupPosition.horizontal === 'left' ? '-100%' : '0'
-  //     })`,
-  //   }),
-  // };
   return (
     <div className={styles.map_container}>
       {loading ? (
@@ -303,7 +280,6 @@ function Map(props) {
             activeCity={activeCity}
             cities={cities}
             popupRef={popupRef}
-            // popupStyles={popupStyles}
             markerPosition={markerPosition}
             popupMode={popupMode}
             popupPosition={popupPosition}

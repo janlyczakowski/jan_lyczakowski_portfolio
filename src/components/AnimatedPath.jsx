@@ -1,7 +1,6 @@
 import { useSpring, animated } from '@react-spring/web';
 
 function AnimatedPath(props) {
-  console.log('animated path rendered');
   const { shape, geoPathGenerator, activePathRef } = props;
 
   const pathAnimation = useSpring({

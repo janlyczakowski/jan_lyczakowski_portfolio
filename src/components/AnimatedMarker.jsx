@@ -1,9 +1,7 @@
-import { useState, useRef, useEffect } from 'react';
 import { useSpring, animated } from '@react-spring/web';
-import styles from '../css/AboutMe.module.css';
 
 function AnimatedMarker(props) {
-  const { x, y, markerSize, shape, activeCity, cities, markerRef } = props;
+  const { x, y, markerSize, shape, activeCity, markerRef } = props;
   const isActive = activeCity.name === shape.properties.city;
 
   const pointAnimation = useSpring({
