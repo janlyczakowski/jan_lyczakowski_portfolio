@@ -38,7 +38,6 @@ function Header() {
             <li className={styles.subtitle}>Front-end Developer</li>
           </ul>
         </div>
-
         <FontAwesomeIcon icon={faChevronDown} className={arrowStyle} />
       </div>
     </header>

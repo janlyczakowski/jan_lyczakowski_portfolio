@@ -5,6 +5,7 @@ import {
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import styles from '../css/MyProject.module.css';
+import { useSwipeable } from 'react-swipeable';
 
 function Carousel(props) {
   console.log('carousel rendered');
@@ -25,9 +26,16 @@ function Carousel(props) {
     setCurrentIndex(index);
   };
 
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: handleNext,
+    onSwipedRight: handlePrevious,
+    // preventDefaultTouchmoveEvent: true,
+    // trackMouse: true,
+  });
+
   return (
     <div className={styles.carousel}>
-      <div className={styles.picture_container}>
+      <div className={styles.picture_container} {...swipeHandlers}>
         <img
           src={images[currentIndex]}
           // key={currentIndex}
