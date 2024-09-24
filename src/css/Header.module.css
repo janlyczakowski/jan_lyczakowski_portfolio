@@ -27,15 +27,15 @@
 @keyframes moving {
   0% {
     opacity: 0;
-    transform: translate(0, 0);
+    transform: translate(-50%, 0);
   }
   50% {
     opacity: 0.7;
-    transform: translate(0, 10px);
+    transform: translate(-50%, 10px);
   }
   100% {
     opacity: 0;
-    transform: translate(0, 0);
+    transform: translate(-50%, 0);
   }
 }
 
@@ -49,7 +49,7 @@
 
 .title_container {
   position: absolute;
-  top: 43%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
