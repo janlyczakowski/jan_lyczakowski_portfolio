@@ -90,7 +90,7 @@ function Map(props) {
         setMarkerSize(1.75);
       } else {
         setPopupMode('mobile');
-        setMapScale(3000);
+        setMapScale(2900);
         setMapCenter([16, 49]);
         setMaskSettings({ x: '0%', y: '-25%', width: '100%', height: '150%' });
         setMarkerSize(2.25);

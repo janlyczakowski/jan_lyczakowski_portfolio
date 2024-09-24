@@ -44,7 +44,7 @@
   padding: 1rem;
 }
 .active_city {
-  margin: auto;
+  margin: 0rem auto;
   /* margin-bottom: 2rem; */
   font-size: 1.5rem;
   font-weight: var(--fw-extra-bold);
