@@ -55,10 +55,13 @@ function Map(props) {
   useEffect(() => {
     // adjust map scale, map center and mask on differnt screen sizes
     const handleResize = () => {
-      // if (window.innerWidth >= 1400) {
-      //   setMarkerSize(1);
-      // } else
-      if (window.innerWidth >= 800) {
+      if (window.innerWidth >= 1200) {
+        setPopupMode('pc');
+        setMapScale(1700);
+        setMapCenter([17, 50]);
+        setMaskSettings({ x: '0%', y: '0%', width: '100%', height: '100%' });
+        setMarkerSize(1.25);
+      } else if (window.innerWidth >= 800) {
         setPopupMode('pc');
         setMapScale(2000);
         setMapCenter([17, 50]);

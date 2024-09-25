@@ -150,7 +150,7 @@
 @media screen and (min-width: 1200px) {
   .img_container {
     /* map scale: 1:10k */
-    background-image: url('../resources/img/home/1_10k.jpg');
+    background-image: url('../resources/img/home/1_8k.jpg');
     /* background-size: contain; */
   }
 }
@@ -158,6 +158,6 @@
 @media screen and (min-width: 1600px) {
   .img_container {
     /* map scale: 1:15k */
-    background-image: url('../resources/img/home/1_15k.jpg');
+    background-image: url('../resources/img/home/1_8k.jpg');
   }
 }
