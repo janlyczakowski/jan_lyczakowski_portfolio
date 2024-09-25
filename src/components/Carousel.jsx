@@ -29,32 +29,35 @@ function Carousel(props) {
   const swipeHandlers = useSwipeable({
     onSwipedLeft: handleNext,
     onSwipedRight: handlePrevious,
+    preventScrollOnSwipe: true,
   });
 
   return (
     <div className={styles.carousel}>
       <div className={styles.picture_container} {...swipeHandlers}>
-        <img
-          src={images[currentIndex]}
-          // key={currentIndex}
-          className={styles.project_picture}
-          alt={altImg}
-        />
-        <div className={styles.left} onClick={handlePrevious}>
-          <FontAwesomeIcon
-            icon={faChevronLeft}
-            className={`${styles.arrow} ${[
-              styles[`${category.split(' ')[0]}_${category.split(' ')[1]}`],
-            ]}`}
+        <div className={styles.image_container}>
+          <img
+            src={images[currentIndex]}
+            // key={currentIndex}
+            className={styles.project_picture}
+            alt={altImg}
           />
-        </div>
-        <div className={styles.right} onClick={handleNext}>
-          <FontAwesomeIcon
-            icon={faChevronRight}
-            className={`${styles.arrow} ${[
-              styles[`${category.split(' ')[0]}_${category.split(' ')[1]}`],
-            ]}`}
-          />
+          <div className={styles.left} onClick={handlePrevious}>
+            <FontAwesomeIcon
+              icon={faChevronLeft}
+              className={`${styles.arrow} ${[
+                styles[`${category.split(' ')[0]}_${category.split(' ')[1]}`],
+              ]}`}
+            />
+          </div>
+          <div className={styles.right} onClick={handleNext}>
+            <FontAwesomeIcon
+              icon={faChevronRight}
+              className={`${styles.arrow} ${[
+                styles[`${category.split(' ')[0]}_${category.split(' ')[1]}`],
+              ]}`}
+            />
+          </div>
         </div>
       </div>
       <div className={styles.indicator}>
