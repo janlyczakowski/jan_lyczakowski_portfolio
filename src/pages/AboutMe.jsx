@@ -15,7 +15,7 @@ const cities = [
     name: 'Braniewo',
     country: 'Poland',
     time: '1998 - 2017',
-    text: 'I grew up in a small town in the north of Poland and by the time I was in high school, I was already interested in geography.',
+    text: 'I grew up in a small town in the north of Poland and since high school, I was already interested in geography.',
   },
   {
     value: 13,
@@ -23,7 +23,7 @@ const cities = [
     name: 'Warsaw',
     country: 'Poland',
     time: '2017 - 2021',
-    text: "After high school, I went to the Warsaw University of Technology to study Geodesy and Cartography. That's when I became fascinated with maps and geospatial data.",
+    text: "After high school, I decided to study Geodesy and Cartography at the Warsaw University of Technology. That's when I became fascinated with maps and geospatial data.",
   },
   {
     value: 25,
@@ -31,7 +31,7 @@ const cities = [
     name: 'Bari',
     country: 'Italy',
     time: '2020',
-    text: "During my university studies, I participated in the Eramus+ program for five months. It was a life-changing experience for me. I learned a lot and it was there that I decided I wanted to study abroad in the future and do my Master's in Cartography.",
+    text: "During my university studies, I participated in the Eramus+ program for five months. It was a life-changing experience, not only academically but also culturally. It was during this time that I decided to study abroad and pursue my Master's in Cartography.",
   },
   {
     value: 37,
@@ -39,7 +39,7 @@ const cities = [
     name: 'Genoa',
     country: 'Italy',
     time: '2021/2022',
-    text: 'After graduation in 2021, I did 7 months internship learning the web development and web-based GIS applications. I liked it so much that I stayed there for another six months to work as a front-end developer.',
+    text: 'After graduating in 2021, I successfully completed a seven-month internship in web development, where I discovered a passion for coding and web mapping. I enjoyed the experience so much that I continued working at the company as a front-end developer for six months.',
   },
   {
     value: 50,
@@ -47,7 +47,7 @@ const cities = [
     name: 'Munich',
     country: 'Germany',
     time: '2022/2023',
-    text: 'In October I started my International Cartography M.Sc. at the Technical University of Munich where during the first semester I deepened my knowledge in cartography and geovisualizations.',
+    text: 'In October I started an International Cartography M.Sc. at the Technical University of Munich where during the first semester I expanded my knowledge in cartography and geovisualizations.',
   },
   {
     value: 63,
@@ -55,7 +55,7 @@ const cities = [
     name: 'Vienna',
     country: 'Austria',
     time: '2023',
-    text: "In the second semester of my Master's, I went to Vienna to learn more about web mapping and multimedia cartography and polish my development skills at the Technical University of Vienna.",
+    text: 'In the second semester at the Technical University of Vienna, I dived deeper into web mapping and multimedia cartography, gaining hands-on experience through practical projects that helped me polish my development skills.',
   },
   {
     value: 75,
@@ -63,7 +63,7 @@ const cities = [
     name: 'Transinne',
     country: 'Belgium',
     time: '2023',
-    text: 'After finishing my second semester, I participated in the pilot edition of the Navigation Training Course organized by the European Space Agency where  I learned a lot about navigation systems and location-based services.',
+    text: 'After finishing the second semester of my Master’s, I participated in the pilot edition of the Navigation Training Course organized by the European Space Agency where I learned a lot about navigation systems and location-based services.',
   },
   {
     value: 87,
