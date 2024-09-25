@@ -23,7 +23,7 @@ const cities = [
     name: 'Warsaw',
     country: 'Poland',
     time: '2017 - 2021',
-    text: "After high school, I went to the Warsaw University of Technology to study Geodesy and Cartography. That's when I became fascinated by maps and geospatial data.",
+    text: "After high school, I went to the Warsaw University of Technology to study Geodesy and Cartography. That's when I became fascinated with maps and geospatial data.",
   },
   {
     value: 25,
