@@ -29,8 +29,6 @@ function Carousel(props) {
   const swipeHandlers = useSwipeable({
     onSwipedLeft: handleNext,
     onSwipedRight: handlePrevious,
-    // preventDefaultTouchmoveEvent: true,
-    // trackMouse: true,
   });
 
   return (

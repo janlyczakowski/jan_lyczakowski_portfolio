@@ -24,6 +24,7 @@
   transition: background-color 0.25s ease-in-out;
   cursor: pointer;
   background-color: var(--clr-background-light);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .category#software_development.active,
