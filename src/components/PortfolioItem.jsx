@@ -15,35 +15,14 @@ function PortfolioItem(props) {
     date,
     keywords,
   } = props;
-  // const [isCoverTextVisible, setIsCoverTextVisible] = useState(false);
 
-  // const onMouseOverHandler = () => {
-  //   setIsCoverTextVisible(true);
-  // };
-
-  // const onMouseOutHandler = () => {
-  //   setIsCoverTextVisible(false);
-  // };
-
-  // const coverTextStyle = isCoverTextVisible
-  //   ? `${styles.portfolio_item_cover_text} ${styles.portfolio_item_cover_text_show}`
-  //   : `${styles.portfolio_item_cover_text}`;
   return (
     <div className={styles.project}>
       <Link
         to={navigateTo}
         className={styles.portfolio_item}
         data-category={category}
-        // data-gen={dataGen}
-        // onMouseOver={onMouseOverHandler}
-        // onMouseOut={onMouseOutHandler}
       >
-        {/* <div className={coverTextStyle} data-attribute={dataAttribute}>
-        {coverText}
-        <br />
-        <span className={styles.cover_text_date}>{date}</span>
-      </div> */}
-
         <img
           src={srcImg}
           alt={altImg}

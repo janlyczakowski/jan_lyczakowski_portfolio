@@ -1,8 +1,6 @@
 footer {
   color: var(--clr-dark-color-text);
   background-color: var(--clr-background-dark);
-  /* color: var(--clr-dark-color-text); */
-  /* background-color: var(--clr-background-light); */
   text-align: center;
   padding: 3em 1em;
 }
@@ -34,7 +32,6 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* color: var(--clr-dark-color-text); */
   font-weight: var(--fw-bold);
   color: var(--clr-bright-text);
 }

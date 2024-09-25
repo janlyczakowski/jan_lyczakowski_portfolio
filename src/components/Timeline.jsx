@@ -7,10 +7,8 @@ import styles from '../css/AboutMe.module.css';
 function Timeline(props) {
   const { cities, activeCity, setActiveCity } = props;
   const listRef = useRef(null);
-  // initial values 2 times single offset
-  const [offset, setOffset] = useState(92);
+  const [offset, setOffset] = useState(92); // initial values 2 times single offset
   const tablet_screen = useMediaQuery('(min-width:800px)');
-  // const pc_screen = useMediaQuery('(min-width:1200px)');
 
   function onSliderChange(e, value) {
     setActiveCity(cities.find((city) => value === city.value));

@@ -41,7 +41,7 @@ function Map(props) {
   const [popupMargin, setPopupMargin] = useState({
     markerAbove: 0,
     markerBelow: 0,
-  }); // State to store the height of the active path
+  });
 
   // set up scale, centere of the map and projection
   const projection = d3.geoConicEqualArea().scale(mapScale).center(mapCenter);

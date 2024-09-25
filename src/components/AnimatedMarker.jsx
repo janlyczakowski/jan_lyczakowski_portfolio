@@ -6,7 +6,6 @@ function AnimatedMarker(props) {
 
   const pointAnimation = useSpring({
     config: {
-      // duration: 500,
       tension: 500,
       mass: 2,
       velocity: 0,
@@ -28,8 +27,9 @@ function AnimatedMarker(props) {
     },
   });
 
+  // Do not render anything if it's not the active city
   if (!isActive) {
-    return null; // Do not render anything if it's not the active city
+    return null;
   }
   return (
     <>

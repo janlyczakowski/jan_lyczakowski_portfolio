@@ -25,7 +25,6 @@
 }
 .skills_list {
   display: flex;
-  /* justify-content: center; */
   flex-wrap: wrap;
   list-style: none;
   padding: 0 0 0 1.1rem;
@@ -63,7 +62,6 @@
 .category_subtitles {
   margin: 0;
   font-size: 0.9rem;
-  /* font-style: italic; */
   font-weight: var(--fw-extra-bold);
 }
 

@@ -39,27 +39,12 @@ function AnimatedPopup(props) {
   const [popupAnimation, api] = useSpring(() => ({
     config: {
       duration: 2000,
-      // tension: 500,
-      // mass: 2,
-      // velocity: 0,
     },
     from: {
       opacity: 0,
-      //   transform:
-      //     popupMode === 'pc'
-      //       ? `translateX(${
-      //           popupPosition.horizontal === 'left' ? '-100%' : '0'
-      //         }) scale(0)`
-      //       : `translateX(-50%) scale(0)`,
     },
     to: {
       opacity: 1,
-      // transform:
-      //   popupMode === 'pc'
-      //     ? `translateX(${
-      //         popupPosition.horizontal === 'left' ? '-100%' : '0'
-      //       }) scale(1)`
-      //     : `translateX(-50%) scale(1)`,
     },
   }));
 
@@ -67,21 +52,9 @@ function AnimatedPopup(props) {
     api.start({
       from: {
         opacity: 0,
-        // transform:
-        //   popupMode === 'pc'
-        //     ? `translateX(${
-        //         popupPosition.horizontal === 'left' ? '-100%' : '0'
-        //       }) scale(0)`
-        //     : `translateX(-50%) scale(0)`,
       },
       to: {
         opacity: 1,
-        // transform:
-        //   popupMode === 'pc'
-        //     ? `translateX(${
-        //         popupPosition.horizontal === 'left' ? '-100%' : '0'
-        //       }) scale(1)`
-        //     : `translateX(-50%) scale(1)`,
       },
       reset: true,
     });

@@ -8,8 +8,6 @@ import '../css/index.css';
 function Header() {
   const [scrollTop, setScrollTop] = useState(0);
 
-  // toggle visibility of the blinking arrow
-
   const arrowStyle =
     scrollTop > 0
       ? `${styles.scroll_down_arrow} ${styles.scroll_down_arrow_disabled}`

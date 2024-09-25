@@ -38,7 +38,6 @@ function Carousel(props) {
         <div className={styles.image_container}>
           <img
             src={images[currentIndex]}
-            // key={currentIndex}
             className={styles.project_picture}
             alt={altImg}
           />
