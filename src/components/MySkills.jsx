@@ -36,6 +36,7 @@ function MySkills() {
               <li className={styles.skills_element}>HTML</li>
               <li className={styles.skills_element}>CSS</li>
               <li className={styles.skills_element}>JavaScript</li>
+              <li className={styles.skills_element}>TypeScript</li>
               <li className={styles.skills_element}>React</li>
               <li className={styles.skills_element}>Git</li>
             </ul>
