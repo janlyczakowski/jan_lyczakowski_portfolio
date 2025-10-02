@@ -58,12 +58,13 @@
 .subtitle_list {
   display: flex;
   padding: 0;
-  justify-content: space-around;
+  justify-content: center;
   color: var(--clr-dark-color-text);
   list-style: none;
   font-weight: var(--fw-extra-bold);
   font-size: 0.4rem;
   text-transform: uppercase;
+  gap: 1rem;
 }
 .subtitle {
   padding: 0 0.5em;

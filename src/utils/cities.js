@@ -73,5 +73,14 @@ export const pointsData = {
       },
       id: 'Dresden',
     },
+    {
+      type: 'Feature',
+      properties: { city: 'Innsbruck', country: 'Austria' },
+      geometry: {
+        coordinates: [11.39454, 47.26266],
+        type: 'Point',
+      },
+      id: 'Innsbruck',
+    },
   ],
 };

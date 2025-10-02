@@ -31,9 +31,8 @@ function Header() {
         <div className={styles.title_container}>
           <h1 className={styles.title_picture}>Jan Łyczakowski</h1>
           <ul className={styles.subtitle_list}>
-            <li className={styles.subtitle}>Cartographer</li>
             <li className={styles.subtitle}>GIS Developer</li>
-            <li className={styles.subtitle}>Front-end Developer</li>
+            <li className={styles.subtitle}>WebGIS Administrator</li>
           </ul>
         </div>
         <FontAwesomeIcon icon={faChevronDown} className={arrowStyle} />

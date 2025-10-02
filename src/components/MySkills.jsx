@@ -45,11 +45,11 @@ function MySkills() {
                 icon={faChevronRight}
                 className={styles.arrow_icon}
               />
-              <p className={styles.category_subtitles}>Libraries</p>
+              <p className={styles.category_subtitles}>Mapping libraries</p>
             </div>
             <ul className={styles.skills_list}>
-              <li className={styles.skills_element}>Three.js</li>
               <li className={styles.skills_element}>Leaflet</li>
+              <li className={styles.skills_element}>Three.js</li>
               <li className={styles.skills_element}>Mapbox GL JS</li>
               <li className={styles.skills_element}>ArcGIS Maps SDK for JS</li>
             </ul>
@@ -66,6 +66,7 @@ function MySkills() {
             </div>
             <ul className={styles.skills_list}>
               <li className={styles.skills_element}>ArcGIS Pro</li>
+              <li className={styles.skills_element}>QGIS</li>
               <li className={styles.skills_element}>Adobe Illustrator</li>
               <li className={styles.skills_element}>Blender</li>
             </ul>
@@ -74,11 +75,14 @@ function MySkills() {
                 icon={faChevronRight}
                 className={styles.arrow_icon}
               />
-              <p className={styles.category_subtitles}>Data & Statistics</p>
+              <p className={styles.category_subtitles}>
+                Data Processing & Analysis
+              </p>
             </div>
             <ul className={styles.skills_list}>
-              <li className={styles.skills_element}>R</li>
               <li className={styles.skills_element}>Python</li>
+              <li className={styles.skills_element}>R</li>
+              <li className={styles.skills_element}>ArcGIS API for Python</li>
             </ul>
           </div>
 
